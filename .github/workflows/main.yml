@@ -47,14 +47,24 @@ jobs:
       - name: Update feeds
         run: |
           cd lede
-                   
+         
+          # 修改 wan6 dhcp接口
+          sed -i 's/br-$1/eth0/g' package/base-files/files/bin/config_generate
+          sed -i 's/set network.${1}6/set network.wan6/g' package/base-files/files/bin/config_generate
+          
           # 开放 web管理
           sed -i 's/option rfc1918_filter 1/option rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
           sed -i 's/option input		REJECT/option input		ACCEPT/g' package/network/config/firewall/files/firewall.config
           sed -i 's/option forward		REJECT/option forward		ACCEPT/g' package/network/config/firewall/files/firewall.config
           # 静态 to DHCP
           sed -i 's/-static/-dhcp/g' package/base-files/files/lib/functions/uci-defaults.sh
-                                      
+          sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
+          
+          # 删除 配置
+          sed -i '/set network.$1.ipaddr='$ipad'/d' package/base-files/files/bin/config_generate
+          sed -i '/set network.$1.netmask='$netm'/d' package/base-files/files/bin/config_generate
+          sed -i '/set network.$1.type='$type'/d' package/base-files/files/bin/config_generate
+                             
           # 添加 插件 源地址
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           

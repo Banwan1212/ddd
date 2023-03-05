@@ -111,6 +111,7 @@ jobs:
           CONFIG_PACKAGE_luci-lib-docker=y
           CONFIG_PACKAGE_luci-app-dockerman=y
           CONFIG_PACKAGE_luci-lib-jsonc=y
+          CONFIG_PACKAGE_luci-app-wireguard=y
           
           EOF
           #

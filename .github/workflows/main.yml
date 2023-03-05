@@ -111,8 +111,12 @@ jobs:
           CONFIG_PACKAGE_luci-lib-docker=y
           CONFIG_PACKAGE_luci-app-dockerman=y
           CONFIG_PACKAGE_luci-lib-jsonc=y
+          #VPN
           CONFIG_PACKAGE_luci-app-wireguard=y
-          
+          CONFIG_PACKAGE_luci-app-openvpn=y
+          CONFIG_PACKAGE_luci-app-openvpn-server=y
+          CONFIG_PACKAGE_luci-app-pptp-server=y
+          CONFIG_PACKAGE_luci-app-frpc=y
           EOF
           #
           # ===============================================================

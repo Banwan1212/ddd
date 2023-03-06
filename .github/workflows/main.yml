@@ -178,6 +178,13 @@ jobs:
           name: OpenWrt_firmware
           path: ./lede/bin/targets/
 
+      - name: Upload firmware to cowtransfer
+        run: |
+          curl -fsSL git.io/file-transfer | sh
+          ./transfer cow --block 2621440 -s -p 64 --no-progress ./lede/bin/targets/ 2>&1 | tee cowtransfer.log
+          echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
+          echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
+    
       - name: Upload release asset
         if: github.event == 'release'
         uses: svenstaro/upload-release-action@v2

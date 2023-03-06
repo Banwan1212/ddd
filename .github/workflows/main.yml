@@ -117,6 +117,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-pptp-server=y
           CONFIG_PACKAGE_luci-app-frpc=y
+          CONFIG_PACKAGE_luci-app-usb-printer=y
+          
           EOF
           #
           # ===============================================================

@@ -32,8 +32,8 @@ jobs:
 
         run: |
 
-          curl -sL https://git.io/cowtransfer | sh
 
-          ./cowtransfer-uploader ventoy_openwrt_squashfs.sh
+          curl -sL https://git.io/file-transfer | sh
+          ./transfer wet ventoy_openwrt_squashfs.sh
 
     

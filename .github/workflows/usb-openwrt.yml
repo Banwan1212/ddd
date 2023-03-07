@@ -32,8 +32,8 @@ jobs:
 
         run: |
 
-          curl -sL https://git.io/file-transfer | sh
+          curl -sL https://git.io/cowtransfer | sh
 
-          ./transfer cow --cookie="remember-mev2=MTgwMzI2OTYzMzA6MTY3OTMyMDY1NjAxNzphY2E2ZGNhMzZiNjlhNWFmNzY0Mzc4ZjZmNWVmNmJkZA" -a "<eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiN2I2ZTE4NzQtNDk5Ni00ODE4LTkwMjgtNGRmYTUzNjgxNGQwIiwiZXhwIjoxNjc4NzE1ODU2fQ.xJEpEqoKdchNE5vXkqraIdvCgn1aSg22gNYHOEwcUxw>" ventoy_openwrt_squashfs.sh
+          ./cowtransfer-uploader ventoy_openwrt_squashfs.sh
 
     

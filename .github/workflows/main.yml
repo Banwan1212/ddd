@@ -70,8 +70,10 @@ jobs:
            
           # 添加 插件 源地址
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          sed -i 's/src-git luci/#src-git luci/g' ./feeds.conf.default
           
-          cat >> feeds.conf.default <<EOF
+          cat >> feeds.conf.default <<EOF          
+          src-git luci https://github.com/wandduse/luci
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small
           EOF

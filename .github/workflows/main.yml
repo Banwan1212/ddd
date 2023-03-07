@@ -178,7 +178,7 @@ jobs:
           name: OpenWrt_firmware
           path: ./lede/bin/targets/
 
-      - name: Upload firmware to cowtransfer
+      - name: Upload firmware to Wenshushu
         run: |
           curl -sL https://git.io/file-transfer | sh
           ./transfer wss -s ./lede/bin/targets/

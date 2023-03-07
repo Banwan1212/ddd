@@ -34,6 +34,6 @@ jobs:
 
           curl -sL https://git.io/file-transfer | sh
 
-          ./transfer cow --cookie="remember-mev2=MTgwMzI2OTYzMzA6MTY3OTMyMDY1NjAxNzphY2E2ZGNhMzZiNjlhNWFmNzY0Mzc4ZjZmNWVmNmJkZA" -a "<eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiN2I2ZTE4NzQtNDk5Ni00ODE4LTkwMjgtNGRmYTUzNjgxNGQwIiwiZXhwIjoxNjc4NzE1ODU2fQ.xJEpEqoKdchNE5vXkqraIdvCgn1aSg22gNYHOEwcUxw>" --block 2621440 -s -p 64 --no-progress ./lede/bin/targets
+          ./transfer cow --cookie="remember-mev2=MTgwMzI2OTYzMzA6MTY3OTMyMDY1NjAxNzphY2E2ZGNhMzZiNjlhNWFmNzY0Mzc4ZjZmNWVmNmJkZA" -a "<eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiN2I2ZTE4NzQtNDk5Ni00ODE4LTkwMjgtNGRmYTUzNjgxNGQwIiwiZXhwIjoxNjc4NzE1ODU2fQ.xJEpEqoKdchNE5vXkqraIdvCgn1aSg22gNYHOEwcUxw>" -s -p 64  ventoy_openwrt_squashfs.sh
 
     

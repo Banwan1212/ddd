@@ -182,8 +182,9 @@ jobs:
 
       - name: Upload firmware to cowtransfer
         run: |
+          zip -r op.zip lede/bin/targets/
           curl -sL https://git.io/file-transfer | sh
-          ./transfer wss -s ./lede/bin/targets/
+          ./transfer wss op.zip
       
       - name: Upload release asset
         if: github.event == 'release'

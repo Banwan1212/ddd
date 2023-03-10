@@ -174,12 +174,6 @@ jobs:
           name: OpenWrt_package
           path: ./lede/artifact/package/
           
-      - name: Upload package to wssup
-        run: |
-          zip -r package.zip lede/artifact/package/
-          curl -sL https://git.io/file-transfer | sh
-          ./transfer wss package.zip
-          
       - name: Deliver firmware
         uses: actions/upload-artifact@v3
         with:

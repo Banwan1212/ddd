@@ -183,6 +183,8 @@ jobs:
       - name: Upload firmware to wssup
         run: |
           zip -r op.zip lede/bin/targets/
+          zip -r ophj.zip lede/artifact/
           curl -sL https://git.io/file-transfer | sh
           ./transfer wss op.zip
+          ./transfer wss ophj.zip
       

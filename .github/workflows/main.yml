@@ -185,12 +185,3 @@ jobs:
           zip -r op.zip lede/bin/targets/
           curl -sL https://git.io/file-transfer | sh
           ./transfer wss op.zip
-      
-      - name: Upload release asset
-        if: github.event == 'release'
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.YOURTOKEN }}
-          file: ./lede/artifact/firmware/*
-          tag: ${{ github.ref }}
-          file_glob: true

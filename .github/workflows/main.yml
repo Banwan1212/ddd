@@ -179,9 +179,3 @@ jobs:
         with:
           name: OpenWrt_firmware
           path: ./lede/bin/targets/
-
-      - name: Upload firmware to cowtransfer
-        run: |
-          zip -r op.zip lede/bin/targets/
-          curl -sL https://git.io/file-transfer | sh
-          ./transfer wss op.zip

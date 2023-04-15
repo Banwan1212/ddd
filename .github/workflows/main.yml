@@ -132,7 +132,15 @@ jobs:
           # 
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
-          
+      - name: Deliver buildinfo
+
+        uses: actions/upload-artifact@v3
+
+        with:
+
+          name: OpenWrt_config
+
+          path: ./lede/.config
       - name: Make download
         run: |
           cd lede

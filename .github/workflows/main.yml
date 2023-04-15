@@ -81,14 +81,7 @@ jobs:
           
           ./scripts/feeds update -a                              
           ./scripts/feeds install -a
-          
-      - name: Start SSH via tmate
-        uses: rdp-studio/ssh2actions@main
-        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}    
-          
+
       - name: Generate configuration file
         run: |
           cd lede
@@ -132,15 +125,19 @@ jobs:
           # 
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
-      - name: Deliver buildinfo
-
+      - name: Start SSH via tmate
+        uses: rdp-studio/ssh2actions@main
+        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}   
+          
+      - name: up config
         uses: actions/upload-artifact@v3
-
         with:
-
           name: OpenWrt_config
-
           path: ./lede/.config
+          
       - name: Make download
         run: |
           cd lede

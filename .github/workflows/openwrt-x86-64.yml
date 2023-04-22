@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-docket-64-x86
+name: openwrt-x86-64
 
 on:
   repository_dispatch:

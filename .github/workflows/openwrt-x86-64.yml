@@ -61,7 +61,7 @@ jobs:
           CONFIG_TARGET_ROOTFS_TARGZ=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=1024
                     
-          # CONFIG_DEFAULT_dnsmasq is not set
+         
           # CONFIG_PACKAGE_dnsmasq is not set
           CONFIG_LUCI_LANG_zh_Hans=y
           

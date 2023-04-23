@@ -8,21 +8,14 @@
 #
 
 name: openwrt-x86-64
-
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'true/false'
+   
 jobs:
 
   build_openwrt:
-
     name: Build OpenWrt firmware
-
     runs-on: ubuntu-latest
     
     steps:

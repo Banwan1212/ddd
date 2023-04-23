@@ -64,7 +64,11 @@ jobs:
           # CONFIG_DEFAULT_dnsmasq is not set
           # CONFIG_PACKAGE_dnsmasq is not set
           CONFIG_LUCI_LANG_zh_Hans=y
+          
           CONFIG_PACKAGE_luci-theme-bootstrap=y
+          CONFIG_PACKAGE_luci-theme-material=y
+          CONFIG_PACKAGE_luci-theme-openwrt=y
+          CONFIG_PACKAGE_luci-theme-openwrt-2020=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
           CONFIG_PACKAGE_dnsmasq_full=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y

@@ -64,16 +64,53 @@ jobs:
          
           # CONFIG_PACKAGE_dnsmasq is not set
           CONFIG_LUCI_LANG_zh_Hans=y
-          
+          CONFIG_PACKAGE_luci-mod-admin-full=y
+          CONFIG_PACKAGE_luci-mod-battstatus=y
+          CONFIG_PACKAGE_luci-mod-dashboard=y
+          CONFIG_PACKAGE_luci-mod-dsl=y
+          CONFIG_PACKAGE_luci-mod-network=y
+          CONFIG_PACKAGE_luci-mod-rpc=y
+          CONFIG_PACKAGE_luci-mod-status=y
+          CONFIG_PACKAGE_luci-mod-system=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-theme-openwrt=y
           CONFIG_PACKAGE_luci-theme-openwrt-2020=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
+          CONFIG_PACKAGE_uhttpd-mod-lua=y
+          CONFIG_PACKAGE_uhttpd-mod-ubus=y
+          CONFIG_PACKAGE_uhttpd-mod-ucode=y
+          # 5. Protocols
+          #
+          CONFIG_PACKAGE_luci-proto-3g=y
+          CONFIG_PACKAGE_luci-proto-autoip=y
+          CONFIG_PACKAGE_luci-proto-batman-adv=y
+          CONFIG_PACKAGE_luci-proto-bonding=y
+          CONFIG_PACKAGE_luci-proto-cni=y
+          CONFIG_PACKAGE_luci-proto-gre=y
+          CONFIG_PACKAGE_luci-proto-hnet=y
+          CONFIG_PACKAGE_luci-proto-ipip=y
+          CONFIG_PACKAGE_luci-proto-ipv6=y
+          CONFIG_PACKAGE_luci-proto-modemmanager=y
+          CONFIG_PACKAGE_luci-proto-ncm=y
+          CONFIG_PACKAGE_luci-proto-nebula=y
+          CONFIG_PACKAGE_luci-proto-openconnect=y
+          CONFIG_PACKAGE_luci-proto-openfortivpn=y
+          CONFIG_PACKAGE_luci-proto-ppp=y
+          CONFIG_PACKAGE_luci-proto-pppossh=y
+          CONFIG_PACKAGE_luci-proto-qmi=y
+          CONFIG_PACKAGE_luci-proto-relay=y
+          CONFIG_PACKAGE_luci-proto-sstp=y
+          CONFIG_PACKAGE_luci-proto-unet=y
+          CONFIG_PACKAGE_luci-proto-vpnc=y
+          CONFIG_PACKAGE_luci-proto-vxlan=y
+          CONFIG_PACKAGE_luci-proto-wireguard=y
+          # end of 5. Protocols
+          
           CONFIG_PACKAGE_dnsmasq_full=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
-          # CONFIG_PACKAGE_luci-app-filebrowser=y
+          
           CONFIG_PACKAGE_luci-app-smartdns=y
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-fileassistant=y

@@ -44,6 +44,9 @@ jobs:
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small
           EOF
+          # 静态 to DHCP
+          sed -i 's/-static/-dhcp/g' package/base-files/files/lib/functions/uci-defaults.sh
+          sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
           
           ./scripts/feeds update -a                              
           ./scripts/feeds install -a

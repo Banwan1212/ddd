@@ -73,7 +73,7 @@ jobs:
           sed -i 's/src-git luci/#src-git luci/g' ./feeds.conf.default
           
           cat >> feeds.conf.default <<EOF          
-          src-git luci https://github.com/wandduse/luci
+          src-git luci https://github.com/openwrt/luci
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small
           EOF

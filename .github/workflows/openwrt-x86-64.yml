@@ -69,7 +69,7 @@ jobs:
           CONFIG_LUCI_LANG_zh_Hans=y
           CONFIG_PACKAGE_luci-mod-admin-full=y
           CONFIG_PACKAGE_luci-app-opkg=y
-          CONFIG_PACKAGE_ luci-app-opkg=y
+          CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-mod-network=y
           CONFIG_PACKAGE_luci-mod-rpc=y
           CONFIG_PACKAGE_luci-mod-status=y

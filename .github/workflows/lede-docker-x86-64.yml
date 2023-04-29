@@ -43,6 +43,8 @@ jobs:
                     
           # 防火墙 开放 web管理
           sed -i 's/option rfc1918_filter 1/option rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/80/8011/g' package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/443/8443/g' package/network/services/uhttpd/files/uhttpd.config
           sed -i 's/option input		REJECT/option input		ACCEPT/g' package/network/config/firewall/files/firewall.config
           sed -i 's/option forward		REJECT/option forward		ACCEPT/g' package/network/config/firewall/files/firewall.config
           sed -i $'s/list   network		\'wan\'/list   network		\'lan\'/g' package/network/config/firewall/files/firewall.config

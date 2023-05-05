@@ -1,4 +1,4 @@
-name: lede-docker-x86-64
+name: lede-docker-oneCloud
 on:
   repository_dispatch:
   workflow_dispatch:

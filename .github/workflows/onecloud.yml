@@ -1,12 +1,22 @@
-name: OpenWrt-docket-oneCloud
+name: lede-docker-x86-64
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'true/false'
 jobs:
+
   build_openwrt:
+
     name: Build OpenWrt firmware
+
     runs-on: ubuntu-latest
+    
     steps:
+
       - name: Space cleanup
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -22,44 +32,115 @@ jobs:
           
       - name: Clone source code
         run: |
-          git clone https://github.com/openwrt/openwrt
-          # git clone https://github.com/coolsnowwolf/lede
+          
+          git clone https://github.com/coolsnowwolf/lede
       - name: Update feeds
         run: |
-          cd openwrt
-          cat >> feeds.conf.default <<EOF 
-          src-git kenzo https://github.com/kenzok8/openwrt-packages
-          src-git small https://github.com/kenzok8/small
-          EOF
+          cd lede
+         
+          # 修改 wan6 dhcp接口eth0
+          sed -i 's/br-$1/eth0/g' package/base-files/files/bin/config_generate
+                    
+          # 防火墙 开放 web管理
+          sed -i 's/option rfc1918_filter 1/option rfc1918_filter 0/g' package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/80/8011/g' package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/443/8443/g' package/network/services/uhttpd/files/uhttpd.config
+          sed -i 's/22/2211/g' package/network/services/dropbear/files/dropbear.config
+          sed -i 's/option input		REJECT/option input		ACCEPT/g' package/network/config/firewall/files/firewall.config
+          sed -i 's/option forward		REJECT/option forward		ACCEPT/g' package/network/config/firewall/files/firewall.config
+          sed -i $'s/list   network		\'wan\'/list   network		\'lan\'/g' package/network/config/firewall/files/firewall.config
+          sed -i $'s/list   network		\'wan6\'/list   network		\'lan6\'/g' package/network/config/firewall/files/firewall.config
           
           # 静态 to DHCP
           sed -i 's/-static/-dhcp/g' package/base-files/files/lib/functions/uci-defaults.sh
           sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
           
+          # 删除 配置
+          sed -i '/set network.$1.ipaddr='$ipad'/d' package/base-files/files/bin/config_generate
+          sed -i '/set network.$1.netmask='$netm'/d' package/base-files/files/bin/config_generate
+          sed -i '/set network.$1.type='$type'/d' package/base-files/files/bin/config_generate         
+          sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings 
+           
+          # 插件 源地址
+          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          sed -i 's/src-git luci/#src-git luci/g' ./feeds.conf.default
+          
+          cat >> feeds.conf.default <<EOF          
+          src-git luci https://github.com/wandduse/luci
+          src-git kenzo https://github.com/kenzok8/openwrt-packages
+          src-git small https://github.com/kenzok8/small
+          EOF
+                    
+          
           ./scripts/feeds update -a                              
           ./scripts/feeds install -a
-                       
+
       - name: Generate configuration file
         run: |
-          cd openwrt
-          rm -rf ./tmp && rm -rf .config
-          wget https://github.com/Banwan1212/openwrt-config/raw/main/.config
+          cd lede
+          rm -f ./.config*
+          touch ./.config          
+          cat >> .config <<EOF
+          # CONFIG_VMDK_IMAGES is not set
+          # CONFIG_GRUB_EFI_IMAGES is not set          
+          CONFIG_TARGET_ROOTFS_TARGZ=y
+          CONFIG_MODULES=y
+          CONFIG_HAVE_DOT_CONFIG=y
+          CONFIG_TARGET_at91=y
+          CONFIG_TARGET_at91_sama5=y
+          CONFIG_TARGET_IMAGES_GZIP=y
+          CONFIG_GRUB_IMAGES=y
+          CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+          CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+          CONFIG_PACKAGE_ipv6helper=y          
+          # CONFIG_PACKAGE_luci-theme-material=y
+          CONFIG_PACKAGE_luci-app-smartdns=y
+          CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-fileassistant=y
+          # CONFIG_PACKAGE_luci-app-filebrowser=y
+          CONFIG_PACKAGE_luci-app-webadmin=y
+          #-----v6-docker
+          #CONFIG_PACKAGE_luci-app-docker=y
+          #CONFIG_PACKAGE_luci-lib-docker=y
+          #CONFIG_PACKAGE_luci-app-dockerman=y
+          #CONFIG_PACKAGE_luci-lib-jsonc=y
+          #VPN
+          CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-wireguard=y
+          CONFIG_PACKAGE_luci-app-openvpn=y
+          CONFIG_PACKAGE_luci-app-openvpn-server=y
+          CONFIG_PACKAGE_luci-app-pptp-server=y
+          CONFIG_PACKAGE_luci-app-frpc=y
+          CONFIG_PACKAGE_luci-app-usb-printer=y
+          
+          EOF
+          #
+          # ===============================================================
+          # 
+          sed -i 's/^[ \t]*//g' ./.config
           make defconfig
+      - name: Start SSH via tmate
+        uses: rdp-studio/ssh2actions@main
+        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}   
+          
       - name: up config
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_config
-          path: ./openwrt/.config    
-      
+          path: ./lede/.config
+          
       - name: Make download
         run: |
-          cd openwrt
+          cd lede
           make download -j8 || make download -j1 V=s
           rm -rf $(find ./dl/ -size -1024c)
           df -h
       - name: Compile firmware
         run: |
-          cd openwrt
+          cd lede
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
@@ -70,7 +151,7 @@ jobs:
           du -h /mnt/openwrt/ --max-depth=1 || true
       - name: Prepare artifact
         run: |
-          cd openwrt
+          cd lede
           mkdir -p ./artifact/firmware
           mkdir -p ./artifact/package
           mkdir -p ./artifact/buildinfo
@@ -82,16 +163,16 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_buildinfo
-          path: ./openwrt/artifact/buildinfo/
+          path: ./lede/artifact/buildinfo/
 
       - name: Deliver package
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_package
-          path: ./openwrt/artifact/package/
-          
+          path: ./lede/artifact/package/
+
       - name: Deliver firmware
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_firmware
-          path: ./openwrt/bin/targets/
+          path: ./lede/bin/targets/

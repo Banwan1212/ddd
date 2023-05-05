@@ -43,7 +43,9 @@ jobs:
           cat >> feeds.conf.default <<EOF 
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small
+          
           EOF
+          
           # 静态 to DHCP
           # sed -i 's/-static/-dhcp/g' package/base-files/files/lib/functions/uci-defaults.sh
           # sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
@@ -96,6 +98,8 @@ jobs:
           CONFIG_PACKAGE_openssh-sftp-server=y
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
+          
+          
           EOF
           #
           # ===============================================================

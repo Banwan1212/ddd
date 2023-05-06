@@ -90,6 +90,15 @@ jobs:
           CONFIG_TARGET_at91_sama5=y
           CONFIG_PACKAGE_at91bootstrap-sama5d3_xplainednf_uboot=y
           CONFIG_PACKAGE_at91bootstrap-sama5d3_xplainedsd_uboot=y
+          CONFIG_PACKAGE_u-boot-sama5d3_xplained_mmc=y
+          CONFIG_PACKAGE_u-boot-sama5d3_xplained_nandflash=y
+          CONFIG_PACKAGE_u-boot-sama5d4_xplained_nandflash=y
+          CONFIG_TARGET_at91_sama5_DEVICE_microchip_sama5d3-xplained=y
+          CONFIG_TARGET_PROFILE="DEVICE_microchip_sama5d3-xplained"
+          CONFIG_TARGET_ARCH_PACKAGES="arm_cortex-a5_vfpv4"
+          CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe"
+          CONFIG_CPU_TYPE="cortex-a5+vfpv4"
+          
           
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_GRUB_IMAGES=y

@@ -85,6 +85,15 @@ jobs:
           CONFIG_PACKAGE_ipv6helper=y
           
           CONFIG_PACKAGE_luci-app-smartdns=y
+          
+          CONFIG_PACKAGE_luci-app-ttyd=y
+          CONFIG_PACKAGE_luci-app-vlmcsd=y
+          CONFIG_PACKAGE_luci-app-softethervpn=y
+          CONFIG_PACKAGE_luci-app-brook-server=y
+          CONFIG_PACKAGE_luci-app-cupsd=y
+          CONFIG_PACKAGE_luci-app-samba=y
+          CONFIG_PACKAGE_luci-app-samba4=y
+          
           CONFIG_PACKAGE_luci-app-turboacc=y
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-fileassistant=y

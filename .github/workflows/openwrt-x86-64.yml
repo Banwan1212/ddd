@@ -93,6 +93,16 @@ jobs:
           CONFIG_PACKAGE_luci-app-cupsd=y
           CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-samba4=y
+          CONFIG_PACKAGEluci-app-ssr-plus=y
+          CONFIG_PACKAGEluci-app-statistics=y
+          CONFIG_PACKAGEluci-app-trojan-server=y
+          CONFIG_PACKAGEluci-app-ipsec-vpnd=y
+          CONFIG_PACKAGEluci-app-ipsec-vpnserver-manyusers=y
+          CONFIG_PACKAGEluci-app-usb-printer=y
+          CONFIG_PACKAGEluci-app-vsftpd=y
+          CONFIG_PACKAGEluci-app-zerotier=y
+          CONFIG_PACKAGEluci-app-ngrokc=y
+          CONFIG_PACKAGEluci-app-netdata=y
           
           CONFIG_PACKAGE_luci-app-turboacc=y
           CONFIG_PACKAGE_luci-app-passwall=y

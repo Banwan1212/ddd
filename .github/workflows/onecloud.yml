@@ -88,6 +88,8 @@ jobs:
           CONFIG_HAVE_DOT_CONFIG=y
           CONFIG_TARGET_at91=y
           CONFIG_TARGET_at91_sama5=y
+          CONFIG_AT91_DFBOOT=y
+          
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_GRUB_IMAGES=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=1024

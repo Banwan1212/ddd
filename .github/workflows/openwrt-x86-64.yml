@@ -85,6 +85,7 @@ jobs:
           CONFIG_PACKAGE_ipv6helper=y
           
           CONFIG_PACKAGE_luci-app-smartdns=y
+          CONFIG_PACKAGE_luci-app-turboacc=y
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-fileassistant=y
           CONFIG_PACKAGE_luci-app-webadmin=y

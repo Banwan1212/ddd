@@ -88,7 +88,6 @@ jobs:
           
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
-          CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-brook-server=y
           CONFIG_PACKAGE_luci-app-cupsd=y
           CONFIG_PACKAGE_luci-app-samba=y

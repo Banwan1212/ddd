@@ -43,7 +43,7 @@ jobs:
           cat >> feeds.conf.default <<EOF 
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small
-          src-git k9 https://github.com/kiddin9/openwrt-packages
+          
           EOF
           
           # 静态 to DHCP
@@ -87,21 +87,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-smartdns=y
           
           CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-vlmcsd=y
-          CONFIG_PACKAGE_luci-app-brook-server=y
-          CONFIG_PACKAGE_luci-app-cupsd=y
-          CONFIG_PACKAGE_luci-app-samba=y
-          CONFIG_PACKAGE_luci-app-samba4=y
-          CONFIG_PACKAGEluci-app-ssr-plus=y
-          CONFIG_PACKAGEluci-app-statistics=y
-          CONFIG_PACKAGEluci-app-trojan-server=y
-          CONFIG_PACKAGEluci-app-ipsec-vpnd=y
-          CONFIG_PACKAGEluci-app-ipsec-vpnserver-manyusers=y
-          CONFIG_PACKAGEluci-app-usb-printer=y
-          CONFIG_PACKAGEluci-app-vsftpd=y
-          CONFIG_PACKAGEluci-app-zerotier=y
-          CONFIG_PACKAGEluci-app-ngrokc=y
-          CONFIG_PACKAGEluci-app-netdata=y
+
           
           CONFIG_PACKAGE_luci-app-turboacc=y
           CONFIG_PACKAGE_luci-app-passwall=y

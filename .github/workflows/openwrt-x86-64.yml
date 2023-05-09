@@ -85,6 +85,7 @@ jobs:
           CONFIG_PACKAGE_ipv6helper=y
           
           CONFIG_PACKAGE_luci-app-smartdns=y
+          CONFIG_PACKAGE_luci-app-vlmcsd=y
           
           CONFIG_PACKAGE_luci-app-ttyd=y
 

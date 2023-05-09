@@ -114,11 +114,16 @@ jobs:
 
           cat >> .config <<EOF               
 
-          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_at91=y
 
-          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_at91_sama5=y
 
-          CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_at91_sama5_DEVICE_microchip_sama5d3-xplained=y
+
+          CONFIG_AT91_DFBOOT=y
+
+        
+
 
           CONFIG_TARGET_IMAGES_GZIP=y
 

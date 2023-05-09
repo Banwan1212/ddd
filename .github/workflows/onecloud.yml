@@ -36,7 +36,7 @@ jobs:
           git clone https://github.com/openwrt/openwrt
       - name: Update feeds
         run: |
-          cd lede
+          cd openwrt
          
           # 修改 wan6 dhcp接口eth0
           sed -i 's/br-$1/eth0/g' package/base-files/files/bin/config_generate
@@ -77,7 +77,7 @@ jobs:
 
       - name: Generate configuration file
         run: |
-          cd lede
+          cd openwrt
           rm -f ./.config*
           touch ./.config          
           cat >> .config <<EOF
@@ -132,17 +132,17 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_config
-          path: ./lede/.config
+          path: ./openwrt/.config
           
       - name: Make download
         run: |
-          cd lede
+          cd openwrt
           make download -j8 || make download -j1 V=s
           rm -rf $(find ./dl/ -size -1024c)
           df -h
       - name: Compile firmware
         run: |
-          cd lede
+          cd openwrt
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
@@ -153,7 +153,7 @@ jobs:
           du -h /mnt/openwrt/ --max-depth=1 || true
       - name: Prepare artifact
         run: |
-          cd lede
+          cd openwrt
           mkdir -p ./artifact/firmware
           mkdir -p ./artifact/package
           mkdir -p ./artifact/buildinfo
@@ -165,16 +165,16 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_buildinfo
-          path: ./lede/artifact/buildinfo/
+          path: ./openwrt/artifact/buildinfo/
 
       - name: Deliver package
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_package
-          path: ./lede/artifact/package/
+          path: ./openwrt/artifact/package/
 
       - name: Deliver firmware
         uses: actions/upload-artifact@v3
         with:
           name: OpenWrt_firmware
-          path: ./lede/bin/targets/
+          path: ./openwrt/bin/targets/

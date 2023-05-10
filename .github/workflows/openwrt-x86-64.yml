@@ -83,7 +83,7 @@ jobs:
           CONFIG_PACKAGE_dnsmasq_full=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
-          
+          # ssr低调上网Plus+
           CONFIG_PACKAGE_luci-app-ssr-plus=y
           
           CONFIG_TARGET_PREINIT_IP="192.168.1.11"

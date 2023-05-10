@@ -82,6 +82,12 @@ jobs:
           CONFIG_PACKAGE_dnsmasq_full=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
+          
+          # docker
+          CONFIG_PACKAGE_luci-app-docker=y
+          CONFIG_PACKAGE_luci-lib-docker=y
+          CONFIG_PACKAGE_luci-app-dockerman=y
+          CONFIG_PACKAGE_luci-lib-jsonc=y
           # ssr低调上网Plus+
           CONFIG_PACKAGE_luci-app-ssr-plus=y
           # 证书ssl

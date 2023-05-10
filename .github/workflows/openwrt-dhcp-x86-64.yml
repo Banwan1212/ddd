@@ -36,7 +36,6 @@ jobs:
       - name: Clone source code
         run: |
           git clone https://github.com/openwrt/openwrt
-          # git clone https://github.com/coolsnowwolf/lede
       - name: Update feeds
         run: |
           cd openwrt

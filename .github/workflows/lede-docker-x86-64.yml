@@ -32,7 +32,6 @@ jobs:
           
       - name: Clone source code
         run: |
-          # git clone https://github.com/Banwan1212/lede/
           git clone https://github.com/coolsnowwolf/lede
       - name: Update feeds
         run: |

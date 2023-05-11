@@ -45,6 +45,8 @@ jobs:
           #src-git small https://github.com/kenzok8/small
           #src-git small8 https://github.com/kenzok8/small-package
           #src-git kiddin9 https://github.com/kiddin9/openwrt-packages
+          src-git passwall https://github.com/xiaorouji/openwrt-passwall
+          src-git helloworld https://github.com/fw876/helloworld
           EOF
            
           ./scripts/feeds update -a                              

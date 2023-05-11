@@ -49,6 +49,8 @@ jobs:
           src-git passwall https://github.com/xiaorouji/openwrt-passwall
           # luci-app-ssr-plus
           src-git helloworld https://github.com/fw876/helloworld
+          # 广告过滤
+          src-git adguardhome https://github.com/coolsnowwolf/packages/tree/master/net/adguardhome
           EOF
            
           ./scripts/feeds update -a                              

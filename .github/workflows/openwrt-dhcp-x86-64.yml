@@ -70,57 +70,47 @@ jobs:
           CONFIG_LUCI_LANG_zh_Hans=y
           CONFIG_PACKAGE_luci-mod-admin-full=y
           CONFIG_PACKAGE_luci-app-opkg=y
+          CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
           CONFIG_PACKAGE_luci-app-firewall=y
+          CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           CONFIG_PACKAGE_luci-mod-network=y
           CONFIG_PACKAGE_luci-mod-rpc=y
           CONFIG_PACKAGE_luci-mod-status=y
           CONFIG_PACKAGE_luci-mod-system=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
-          
           CONFIG_PACKAGE_luci-app-uhttpd=y
-          
           CONFIG_PACKAGE_dnsmasq_full=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
-          # ssr低调上网Plus+
-          CONFIG_PACKAGE_luci-app-ssr-plus=y
+          
+          
+          # 文件助手
+          CONFIG_PACKAGE_luci-app-fileassistant=y
           # 证书ssl
           CONFIG_PACKAGE_luci-app-acme=y
-          CONFIG_TARGET_PREINIT_IP="192.168.1.11"
-          CONFIG_TARGET_PREINIT_NETMASK="255.255.255.0"
-          CONFIG_TARGET_PREINIT_BROADCAST="192.168.1.255"
-          CONFIG_PACKAGE_kmod-usb-printer=y
-          CONFIG_PACKAGE_luci-app-vsftpd=y
-          CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=y
-          CONFIG_PACKAGE_luci-app-autoreboot=y
-          CONFIG_PACKAGE_luci-app-diskman=y
-          CONFIG_PACKAGE_luci-app-zerotier=y
+          # 流量图形
           CONFIG_PACKAGE_luci-app-vnstat=y
+          # UPNP
           CONFIG_PACKAGE_luci-app-upnp=y
-          CONFIG_PACKAGE_luci-app-netdata=y
+          # 网络带宽监视器
           CONFIG_PACKAGE_luci-app-nlbwmon=y
           CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          # smartdns
           CONFIG_PACKAGE_luci-app-smartdns=y
-          CONFIG_PACKAGE_luci-app-vlmcsd=y
+          # 终端
           CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-turboacc=y
+          # 科学低调上网
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
           CONFIG_PACKAGE_luci-app-passwall=y
-          CONFIG_PACKAGE_luci-app-fileassistant=y
-          CONFIG_PACKAGE_luci-app-webadmin=y
           CONFIG_PACKAGE_luci-app-openclash=y
-          CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
-          CONFIG_PACKAGE_luci-app-pptp-server=y
+          # 内网穿透
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
-          CONFIG_PACKAGE_luci-app-usb-printer=y
+          #ssh连接
           CONFIG_PACKAGE_openssh-sftp-server=y
-          CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
-          
-          
+
           EOF
           #
           # ===============================================================

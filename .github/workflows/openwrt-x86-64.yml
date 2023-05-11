@@ -41,16 +41,11 @@ jobs:
           cd openwrt
           
           cat >> feeds.conf.default <<EOF 
-          src-git kenzo https://github.com/kenzok8/openwrt-packages
-          src-git small https://github.com/kenzok8/small
-          #src-git small8 https://github.com/kenzok8/small-package
-          #src-git kiddin9 https://github.com/kiddin9/openwrt-packages
-          # luci-app-passwall
-          #src-git passwall https://github.com/xiaorouji/openwrt-passwall
-          # luci-app-ssr-plus
-          #src-git helloworld https://github.com/fw876/helloworld
-          # 广告过滤
-          #src-git adguardhome https://github.com/rufengsuixing/luci-app-adguardhome
+          
+          src-git passwall https://github.com/xiaorouji/openwrt-passwall
+          src-git helloworld https://github.com/fw876/helloworld
+          src-git adguardhome https://github.com/rufengsuixing/luci-app-adguardhome
+          
           EOF
            
           ./scripts/feeds update -a                              

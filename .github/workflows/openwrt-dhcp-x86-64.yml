@@ -115,7 +115,10 @@ jobs:
           # 广告屏蔽大师 Plus+
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_adbyby=y
-          
+          # vpn
+          luci-app-pptp-server
+          luci-app-pppoe-server
+          luci-app-ipsec-server
           
           
           

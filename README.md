@@ -12,3 +12,7 @@ CONFIG_TARGET_IMAGES_GZIP=y \
 CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE=y \
 CONFIG_TARGET_ROOTFS_INITRAMFS=y \
 CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+# 添加插件 包
+git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd \
+make menuconfig \
+make package/openwrt-vlmcsd/compile V=99

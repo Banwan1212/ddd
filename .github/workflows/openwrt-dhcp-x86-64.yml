@@ -129,7 +129,8 @@ jobs:
           # Windows激活
           CONFIG_PACKAGE_vlmcsd=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
-          
+          # wireguard
+          CONFIG_PACKAGE_luci-app-wireguard=y
           EOF
           #
           # ===============================================================

@@ -187,7 +187,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-netdata=y
           # 测速
           CONFIG_PACKAGE_luci-app-netspeedtest=y
-          
+          #
+          CONFIG_PACKAGE_luci-app-zerotier=y
           
           
           

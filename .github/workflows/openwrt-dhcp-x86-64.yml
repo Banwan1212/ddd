@@ -130,6 +130,7 @@ jobs:
           CONFIG_PACKAGE_vlmcsd=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
           # wireguard
+          CONFIG_PACKAGE_luci-proto-wireguard=y
           CONFIG_PACKAGE_wireguard=y
           CONFIG_PACKAGE_luci-app-wireguard=y
           # 监控CPU性能

@@ -39,6 +39,8 @@ jobs:
       - name: Update feeds
         run: |
           cd openwrt
+          
+          git clone https://github.com/kiddin9/openwrt-packages/tree/master/luci-app-diskman package/luci-app-diskman
           cat >> feeds.conf.default <<EOF 
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small

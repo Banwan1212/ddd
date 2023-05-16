@@ -40,7 +40,10 @@ jobs:
         run: |
           cd openwrt
           
-          git clone https://github.com/kiddin9/openwrt-packages/tree/master/luci-app-diskman package/luci-app-diskman
+          mkdir -p package/luci-app-diskman && \
+          wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/applications/luci-app-diskman/Makefile -O package/luci-app-diskman/Makefile
+          mkdir -p package/parted && \
+          wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O package/parted/Makefile
           cat >> feeds.conf.default <<EOF 
           src-git kenzo https://github.com/kenzok8/openwrt-packages
           src-git small https://github.com/kenzok8/small

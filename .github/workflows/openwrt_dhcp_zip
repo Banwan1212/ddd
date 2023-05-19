@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 官方最新开发版openwrt动态DHCP 使用docker 
 
-name: openwrt-DHCP-x86-64
+name: openwrt-DHCP-zip
 on:
   repository_dispatch:
   workflow_dispatch:

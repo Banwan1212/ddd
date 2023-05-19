@@ -35,7 +35,9 @@ jobs:
           
       - name: Clone source code
         run: |
-          git clone https://github.com/openwrt/openwrt
+         wget https://github.com/openwrt/openwrt/archive/refs/tags/v22.03.5.zip
+         unzip v22.03.5.zip
+         mv openwrt-22.03.5 openwrt
       - name: Update feeds
         run: |
           cd openwrt

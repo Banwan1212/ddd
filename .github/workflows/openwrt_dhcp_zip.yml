@@ -56,6 +56,8 @@ jobs:
       - name: Generate configuration file
         run: |
           cd openwrt
+          # sed -i 's/Authorization Required/wanuse.com/g' luci/modules/luci-base/ucode/template/sysauth.ut
+          # sed -i 's/Authorization Required/wanuse.com/g' luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
           rm -f ./.config*
           rm -rf ./tmp && rm -rf .config
           touch ./.config          

@@ -58,6 +58,7 @@ jobs:
           cd openwrt
           # sed -i 's/Authorization Required/wanuse.com/g' luci/modules/luci-base/ucode/template/sysauth.ut
           # sed -i 's/Authorization Required/wanuse.com/g' luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
+          # sed -i 's/需要授权/wanuse.com/g' luci/modules/luci-base/po/zh_Hans/base.po
           rm -f ./.config*
           rm -rf ./tmp && rm -rf .config
           touch ./.config          

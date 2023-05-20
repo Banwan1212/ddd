@@ -51,11 +51,12 @@ jobs:
            sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
           
           ./scripts/feeds update -a
+          ./scripts/feeds install -a
           sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/modules/luci-base/ucode/template/sysauth.ut
           sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
           sed -i 's/需要授权/wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
           
-          ./scripts/feeds install -a
+          
      
       - name: Generate configuration file
         run: |

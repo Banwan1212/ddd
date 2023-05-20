@@ -16,3 +16,5 @@ CONFIG_TARGET_ROOTFS_PARTSIZE=1024
 git clone https://github.com/flytosky-f/openwrt-vlmcsd.git package/openwrt-vlmcsd \
 make menuconfig \
 make package/openwrt-vlmcsd/compile V=99
+
+#汉化luci、modules/luci-base/po/zh_Hans/base.po

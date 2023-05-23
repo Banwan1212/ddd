@@ -34,6 +34,7 @@ if [[ $IS_OPENVZ ]]; then
 	exit 0
 fi
 wget https://github.com/wandduse/openwrt_server/releases/download/v6/openwrt-x86-64-generic-squashfs-combined.img.gz -O op.img.gz
+
 #Check User
 if [ `id -u` -eq 0 ];then
 	echo -e "${blue}Checking${none}..."
@@ -58,9 +59,9 @@ fi
 #File Preparation
 #No Checking MD5
 vps_kernel=$(uname -r)
-wrt_kernel="wrt_kernel.bin"
+wrt_kernel="openwrt-x86-64-generic-kernel.bin"
 
-wget --no-check-certificate https://raw.githubusercontent.com/esirplayground/VPS_OpenWrt/main/$wrt_kernel
+wget --no-check-certificate https://github.com/wandduse/openwrt_server/releases/download/v6/$wrt_kernel
 cp $wrt_kernel /boot/vmlinuz-$vps_kernel
 
 echo -e "${red}Rebooting${none}..."

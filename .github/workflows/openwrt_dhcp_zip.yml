@@ -99,6 +99,7 @@ jobs:
           CONFIG_PACKAGE_libqrencode=y
           CONFIG_PACKAGE_block-mount=y
           CONFIG_PACKAGE_cloudflared=y
+          CONFIG_PACKAGE_ffmpeg=y
           
           CONFIG_PACKAGE_docker=y
           CONFIG_PACKAGE_dockerd=y

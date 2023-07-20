@@ -45,7 +45,6 @@ jobs:
           #src-git kenzo https://github.com/kenzok8/openwrt-packages
           #src-git small https://github.com/kenzok8/small
           src-git ddd https://github.com/kiddin9/openwrt-packages
-          #src-git ddd https://github.com/wandduse/openwrt-packages
           EOF
           # 静态 to DHCP
            sed -i 's/-static/-dhcp/g' package/base-files/files/lib/functions/uci-defaults.sh
@@ -120,8 +119,7 @@ jobs:
           
           # 文件助手
           CONFIG_PACKAGE_luci-app-fileassistant=y
-          #CONFIG_PACKAGE_filebrowser=y
-          #CONFIG_PACKAGE_luci-app-filebrowser=y
+          
           CONFIG_PACKAGE_luci-app-filetransfer=y
           # 证书ssl
           CONFIG_PACKAGE_luci-app-acme=y
@@ -195,7 +193,6 @@ jobs:
           # vpn
           CONFIG_PACKAGE_luci-app-pptp-server=y
           CONFIG_PACKAGE_luci-app-pppoe-server=y
-
           # DiskMan 磁盘管理
           CONFIG_PACKAGE_blkid=y
           CONFIG_PACKAGE_fdisk=y

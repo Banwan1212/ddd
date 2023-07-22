@@ -80,8 +80,8 @@ jobs:
          
           # CONFIG_PACKAGE_dnsmasq is not set
           CONFIG_LUCI_LANG_zh_Hans=y
-          CONFIG_PACKAGE_filebrowser=y
-          CONFIG_PACKAGE_luci-app-filebrowser=y
+          
+          
           CONFIG_PACKAGE_luci-mod-admin-full=y
           CONFIG_PACKAGE_luci-app-opkg=y
           CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
@@ -224,7 +224,8 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
           #
           CONFIG_PACKAGE_luci-app-zerotier=y
-          
+          CONFIG_PACKAGE_filebrowser=y
+          CONFIG_PACKAGE_luci-app-filebrowser=y
           
           
           

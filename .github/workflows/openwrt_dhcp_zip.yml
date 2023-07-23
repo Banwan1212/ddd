@@ -51,11 +51,6 @@ jobs:
            sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
           
           ./scripts/feeds update -a
-          cd feeds/ddd/filebrowser/
-          ls
-          rm Makefile
-          wget https://github.com/wandduse/openwrt-packages/raw/master/filebrowser/Makefile
-          
           ./scripts/feeds install -a
           # sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/modules/luci-base/ucode/template/sysauth.ut
           sed -i 's/Authorization Required/openwrt 22.03.5 wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
@@ -85,8 +80,6 @@ jobs:
          
           # CONFIG_PACKAGE_dnsmasq is not set
           CONFIG_LUCI_LANG_zh_Hans=y
-          
-          
           CONFIG_PACKAGE_luci-mod-admin-full=y
           CONFIG_PACKAGE_luci-app-opkg=y
           CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
@@ -106,7 +99,6 @@ jobs:
           CONFIG_PACKAGE_libqrencode=y
           CONFIG_PACKAGE_block-mount=y
           CONFIG_PACKAGE_cloudflared=y
-          CONFIG_PACKAGE_ffmpeg=y
           
           CONFIG_PACKAGE_docker=y
           CONFIG_PACKAGE_dockerd=y
@@ -230,7 +222,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
           #
           CONFIG_PACKAGE_luci-app-zerotier=y
-
+          
           
           
           

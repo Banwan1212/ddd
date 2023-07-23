@@ -52,6 +52,7 @@ jobs:
           
           ./scripts/feeds update -a
           cd feeds/ddd/filebrowser/
+          ls
           rm Makefile
           wget https://github.com/wandduse/openwrt-packages/raw/master/filebrowser/Makefile
           

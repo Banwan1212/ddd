@@ -51,13 +51,15 @@ jobs:
            sed -i 's/none/dhcp/g' package/base-files/files/bin/config_generate
           
           ./scripts/feeds update -a
+          cd feeds/ddd/filebrowser/
+          rm Makefile
+          wget https://github.com/wandduse/openwrt-packages/raw/master/filebrowser/Makefile
+          
           ./scripts/feeds install -a
           # sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/modules/luci-base/ucode/template/sysauth.ut
           sed -i 's/Authorization Required/openwrt 22.03.5 wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
           sed -i 's/需要授权/openwrt 22.03.5 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
-          cd feeds/ddd/filebrowser/
-          rm Makefile
-          wget https://github.com/wandduse/openwrt-packages/raw/master/filebrowser/Makefile
+          
           
      
       - name: Generate configuration file

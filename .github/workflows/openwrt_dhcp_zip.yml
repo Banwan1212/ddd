@@ -43,7 +43,7 @@ jobs:
           cd openwrt
           cat >> feeds.conf.default <<EOF 
           src-git kenzo https://github.com/kenzok8/openwrt-packages
-          #src-git small https://github.com/kenzok8/small
+          src-git small https://github.com/kenzok8/small
           #src-git ddd https://github.com/wandduse/openwrt-packages
           EOF
           # 静态 to DHCP

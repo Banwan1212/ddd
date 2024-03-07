@@ -35,8 +35,8 @@ jobs:
           
       - name: Clone source code
         run: |
-         wget https://github.com/openwrt/openwrt/archive/refs/tags/v22.03.5.zip
-         unzip v22.03.5.zip
+         wget https://github.com/openwrt/openwrt/archive/refs/tags/v23.05.2.zip
+         unzip v23.05.2.zip
          mv openwrt-22.03.5 openwrt
       - name: Update feeds
         run: |
@@ -53,8 +53,8 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           # sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/modules/luci-base/ucode/template/sysauth.ut
-          sed -i 's/Authorization Required/openwrt 22.03.5 wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
-          sed -i 's/需要授权/openwrt 22.03.5 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
+          sed -i 's/Authorization Required/openwrt v23.05.2 wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
+          sed -i 's/需要授权/openwrt v23.05.2 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
           
           
      

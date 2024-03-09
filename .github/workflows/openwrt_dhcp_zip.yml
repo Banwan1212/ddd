@@ -118,18 +118,8 @@ jobs:
           
           # 文件助手
           CONFIG_PACKAGE_luci-app-fileassistant=y
-          # CONFIG_PACKAGE_filebrowser=y
-          # CONFIG_PACKAGE_luci-app-filebrowser=y
-          # CONFIG_PACKAGE_luci-app-filetransfer=y
-          # 证书ssl
-          CONFIG_PACKAGE_luci-app-acme=y
-          # 流量图形
-          CONFIG_PACKAGE_luci-app-vnstat=y
           # UPNP
           CONFIG_PACKAGE_luci-app-upnp=y
-          # 网络带宽监视器
-          CONFIG_PACKAGE_luci-app-nlbwmon=y
-          CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
           # smartdns
           CONFIG_PACKAGE_luci-app-smartdns=y
           # 终端
@@ -180,16 +170,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
-          # 内网穿透
-          CONFIG_PACKAGE_luci-app-frpc=y
-          CONFIG_PACKAGE_luci-app-frps=y
           #ssh连接
           CONFIG_PACKAGE_openssh-sftp-server=y
           # Turbo ACC 加速插件
           # CONFIG_PACKAGE_luci-app-turboacc=y
-          # 广告屏蔽大师 Plus+
-          CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          CONFIG_PACKAGE_adbyby=y
+
           # vpn
           CONFIG_PACKAGE_luci-app-pptp-server=y
           CONFIG_PACKAGE_luci-app-pppoe-server=y
@@ -199,10 +184,7 @@ jobs:
           CONFIG_PACKAGE_lsblk=y
           CONFIG_PACKAGE_luci-app-diskman=y
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y          
-          CONFIG_PACKAGE_smartmontools=y
-          # Windows激活
-          CONFIG_PACKAGE_vlmcsd=y
-          CONFIG_PACKAGE_luci-app-vlmcsd=y
+          CONFIG_PACKAGE_smartmontools=y          
           # wireguard
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
@@ -210,18 +192,9 @@ jobs:
           CONFIG_PACKAGE_wireguard=y
           CONFIG_PACKAGE_wireguard-tools=y
           CONFIG_PACKAGE_kmod-wireguard=y
-          # aria2下载工具
-          CONFIG_PACKAGE_luci-app-aria2=y
+
           # 网络共享（Samba4）
           CONFIG_PACKAGE_luci-app-samba4=y
-          # 监控CPU性能
-          CONFIG_PACKAGE_netdata=y
-          CONFIG_PACKAGE_luci-app-netdata=y
-          # 测速
-          CONFIG_PACKAGE_luci-app-netspeedtest=y
-          CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
-          #
-          CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_ffmpeg=y
           
           

@@ -32,6 +32,7 @@ permissions:
     
 env:
   REPO_URL: https://github.com/openwrt/openwrt
+  # 分支版本master例如：openwrt-19.07
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Lean--p.info

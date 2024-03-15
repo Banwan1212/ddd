@@ -118,7 +118,7 @@ jobs:
           # TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           # TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}    
 
-      - name: patch1补丁和自定义设置
+      - name: patch1补丁和自定义设置插件源
         run: |
           [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
           chmod +x $DIY_P1_SH
@@ -131,7 +131,7 @@ jobs:
         run: cd openwrt && ./scripts/feeds install -a
 
 
-      - name: patch2补丁和自定义设置
+      - name: patch2补丁和自定义设置.config
         run: |
           [ -e files ] && mv files openwrt/files
           [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config

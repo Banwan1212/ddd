@@ -54,7 +54,7 @@
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git lpackage/uci-theme-argon
 # echo 'src-git argon https://github.com/jerrykuku/luci-theme-argon' >>feeds.conf.default
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # echo 'src-git argon-config https://github.com/jerrykuku/luci-app-argon-config' >>feeds.conf.default
 
 # 添加额外软件包

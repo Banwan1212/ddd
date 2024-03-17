@@ -54,15 +54,15 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # 科学上网插件依赖
 
 # adguardhome
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
-svn export https://github.com/kenzok8/openwrt-packages/trunk/adguardhome package/adguardhome
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/adguardhome package/adguardhome
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
 
 # mosdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns package/luci-app-mosdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/mosdns package/mosdns
-svn export https://github.com/kenzok8/openwrt-packages/trunk/v2dat package/v2dat
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns package/luci-app-mosdns
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/mosdns package/mosdns
+# svn export https://github.com/kenzok8/openwrt-packages/trunk/v2dat package/v2dat
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-mosdns package/luci-app-mosdns
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/mosdns package/mosdns
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/v2dat package/v2dat
@@ -134,15 +134,6 @@ CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
 # ssr-plus
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust=y
-# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
 
 # passwall
 CONFIG_PACKAGE_luci-app-passwall=y

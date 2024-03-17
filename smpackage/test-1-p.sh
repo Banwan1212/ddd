@@ -88,6 +88,8 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/poweroff
 
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+
+# 手动添加v2ray-plugin并在主程序中删除small中v2ray-plugin
 sed -i '$a src-git v2ray-plugin https://github.com/kiddin9/openwrt-packages/tree/master/v2ray-plugin' feeds.conf.default
 
 

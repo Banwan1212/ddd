@@ -128,8 +128,7 @@ jobs:
       - name: 更新源 #Update feeds
         run: |
           cd openwrt
-          ./scripts/feeds update -a
-          rm -rf feeds/small/v2ray-plugin
+          ./scripts/feeds update -a         
 
       - name: 安装源 #Install feeds
         run: cd openwrt && ./scripts/feeds install -a

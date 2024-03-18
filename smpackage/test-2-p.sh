@@ -70,9 +70,7 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 # 添加自定义软件包
 echo "
-# 额外组件
-CONFIG_GRUB_IMAGES=y
-CONFIG_VMDK_IMAGES=y
+
 
 # 固件大小
 CONFIG_TARGET_KERNEL_PARTSIZE=128
@@ -96,75 +94,6 @@ CONFIG_PACKAGE_luci-app-uhttpd=y
 CONFIG_PACKAGE_dnsmasq_full=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ipv6helper=y
-
-# 自动重启
-CONFIG_PACKAGE_luci-app-autoreboot=y
-CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
-
-# 关闭dnsmasq
-# CONFIG_PACKAGE_dnsmasq is not set
-
-# Themes
-# CONFIG_PACKAGE_luci-app-argon-config=y
-# CONFIG_PACKAGE_luci-app-argone-config=y
-# CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-argone-config-zh-cn=y
-
-
-# 关机
-CONFIG_PACKAGE_luci-app-poweroff=y
-CONFIG_PACKAGE_luci-i18n-poweroff-zh-cn=y
-
-# openclash
-CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y
-
-# adguardhome
-CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y
-
-# mosdns
-CONFIG_PACKAGE_luci-app-mosdns=y
-CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
-
-# netspeedtest chmod +x /etc/init.d/netspeedtest
-CONFIG_PACKAGE_luci-app-netspeedtest=y
-CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
-
-# ssr-plus
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
-
-# passwall
-CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
-
-CONFIG_PACKAGE_luci-app-passwall2=y
-CONFIG_PACKAGE_luci-i18n-passwall2-zh-cn=y
-
-# VPN
-CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
-CONFIG_PACKAGE_luci-i18n-ipsec-vpnd-zh-cn=y
-
-CONFIG_PACKAGE_luci-app-openvpn=y
-CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
-
-# luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
-
-# luci-app-uugamebooster=y
-CONFIG_PACKAGE_luci-app-uugamebooster=y
-CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
-
-
-# luci-app-webadmin=y
-CONFIG_PACKAGE_luci-app-webadmin=y
-CONFIG_PACKAGE_luci-i18n-webadmin-zh-cn=y
-
-# rclone
-# CONFIG_PACKAGE_rclone=y
-# CONFIG_PACKAGE_fuse3-utils=y
 
 
 " >> .config

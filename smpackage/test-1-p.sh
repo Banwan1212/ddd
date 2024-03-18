@@ -11,7 +11,7 @@
 # =================================================================
 
 # Uncomment a feed source
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
@@ -24,7 +24,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
 
-git clone https://github.com/kenzok8/small.git package/small
+#git clone https://github.com/kenzok8/small.git package/small
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.82/g' package/base-files/files/bin/config_generate
@@ -56,33 +56,33 @@ sed -i 's/192.168.1.1/192.168.1.82/g' package/base-files/files/bin/config_genera
 
 #  下载源码
 ## adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 
 ## autoreboot
-git clone https://github.com/f8q8/luci-app-autoreboot package/luci-app-autoreboot
+#git clone https://github.com/f8q8/luci-app-autoreboot package/luci-app-autoreboot
 
 ## mosdns
- echo 'src-git mosdns https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
+# echo 'src-git mosdns https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
 
 ## netspeedtest
-echo 'src-git netspeedtest https://github.com/sirpdboy/netspeedtest' >>feeds.conf.default
+#echo 'src-git netspeedtest https://github.com/sirpdboy/netspeedtest' >>feeds.conf.default
 
 
 ## OpenClash
-echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
+#echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
 
 
 # echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git' >>feeds.conf.default
 ## passwall
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 ## passwall2
-echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
+#echo 'src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2' >>feeds.conf.default
 
 
 ## poweroff
 # echo 'src-git poweroff https://github.com/esirplayground/luci-app-poweroff' >>feeds.conf.default
-git clone https://github.com/esirplayground/luci-app-poweroff package/poweroff
+#git clone https://github.com/esirplayground/luci-app-poweroff package/poweroff
 
 # git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 

@@ -96,6 +96,9 @@ CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ipv6helper=y
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
+# passwall
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall=y
 
 " >> .config
 

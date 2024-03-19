@@ -234,5 +234,9 @@ jobs:
         with:
           name: ${{ env.Firmware_Name }}_${{ env.REPO_BRANCH }}_${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}_firmware
           path: openwrt/artifact/firmware/
-  
-
+      
+      - name: Deliver img_gz
+        uses: actions/upload-artifact@v3
+        with:
+          name: OpenWrt_gz
+          path: ./openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined.img.gz

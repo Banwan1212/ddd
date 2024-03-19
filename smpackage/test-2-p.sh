@@ -113,6 +113,12 @@ CONFIG_TARGET_ROOTFS_TARGZ=y
 CONFIG_TARGET_ROOTFS_PARTSIZE=1024
 CONFIG_LUCI_LANG_zh_Hans=y
 # CONFIG_PACKAGE_dnsmasq is not set
+CONFIG_PACKAGE_iptables-nft=y
+CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+CONFIG_PACKAGE_iptables-mod-iprange=y
+CONFIG_PACKAGE_iptables-mod-nat-extra=y
+CONFIG_PACKAGE_iptables-mod-socket=y
+CONFIG_PACKAGE_iptables-mod-tproxy=y
 CONFIG_PACKAGE_luci-mod-admin-full=y
 CONFIG_PACKAGE_luci-app-opkg=y
 CONFIG_PACKAGE_luci-app-firewall=y

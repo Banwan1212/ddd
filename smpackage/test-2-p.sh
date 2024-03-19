@@ -72,14 +72,11 @@ mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
 popd
-
 mkdir package/community
 pushd package/community
-
 #Diskman
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
-
 # 去广告
 #ADGuardHome（kiddin9）
 #mkdir luci-app-adguardhome
@@ -91,6 +88,7 @@ svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowse
 svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filetransfer
+
 popd
 
 # .config 添加自定义软件包

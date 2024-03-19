@@ -67,10 +67,14 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/mosdns package/mosdns
 # svn export https://github.com/kiddin9/openwrt-packages/trunk/v2dat package/v2dat
 
+# 添加第三方应用
+mkdir kiddin9
+pushd kiddin9
+git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
+popd
 
 # 添加自定义软件包
 echo "
-
 
 # 固件大小
 CONFIG_TARGET_KERNEL_PARTSIZE=128

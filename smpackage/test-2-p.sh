@@ -80,6 +80,11 @@ pushd package/community
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 
+# 去广告
+#ADGuardHome（kiddin9）
+mkdir luci-app-adguardhome
+cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
+
 popd
 
 # .config 添加自定义软件包

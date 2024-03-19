@@ -95,6 +95,25 @@ CONFIG_PACKAGE_luci-app-uhttpd=y
 CONFIG_PACKAGE_dnsmasq_full=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_qrencode=y
+CONFIG_PACKAGE_libqrencode=y
+CONFIG_PACKAGE_block-mount=y          
+CONFIG_PACKAGE_docker=y
+CONFIG_PACKAGE_dockerd=y
+CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-lib-docker=y
+CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-lib-jsonc=y
+CONFIG_PACKAGE_docker-compose=y
+CONFIG_DOCKER_CGROUP_OPTIONS=y
+CONFIG_PACKAGE_docker-compose=y
+CONFIG_PACKAGE_containerd=y
+CONFIG_PACKAGE_runc=y
+CONFIG_DOCKER_NET_MACVLAN=y
+CONFIG_PACKAGE_libnetwork=y
+CONFIG_DOCKER_OPTIONAL_FEATURES=y
+CONFIG_PACKAGE_tini=y
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
 # passwall
@@ -102,6 +121,7 @@ CONFIG_PACKAGE_luci-app-passwall2=y
 CONFIG_PACKAGE_luci-app-passwall=y
 # ssr
 CONFIG_PACKAGE_luci-app-ssr-plus=y
+
 
 " >> .config
 

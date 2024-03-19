@@ -88,6 +88,13 @@ svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowse
 svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filetransfer
+# VPN服务器
+# svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
+# svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-pptp-server
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server
+
+# svn export https://github.com/kenzok8/small-package/trunk/luci-app-softethervpn
 
 popd
 
@@ -165,8 +172,8 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-brook-server=y
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
 # CONFIG_PACKAGE_luci-app-trojan-server=y
-# CONFIG_PACKAGE_luci-app-openvpn-server=y
-# CONFIG_PACKAGE_luci-app-pptp-server=y
+CONFIG_PACKAGE_luci-app-openvpn-server=y
+CONFIG_PACKAGE_luci-app-pptp-server=y
 # CONFIG_PACKAGE_luci-app-softethervpn=y
 
 " >> .config

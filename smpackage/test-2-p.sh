@@ -73,9 +73,12 @@ pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
 popd
 
-# 添加自定义软件包
-echo "
+#Diskman
+mkdir luci-app-diskman
+cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 
+# .config 添加自定义软件包
+echo "
 # 固件大小
 CONFIG_TARGET_KERNEL_PARTSIZE=128
 CONFIG_TARGET_ROOTFS_PARTSIZE=512

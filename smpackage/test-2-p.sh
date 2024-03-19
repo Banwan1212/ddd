@@ -89,8 +89,8 @@ svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhom
 # 文件助手
 svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser
 svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser
-
-
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant
+svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filetransfer
 popd
 
 # .config 添加自定义软件包
@@ -156,12 +156,19 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
 # 文件助手
-#CONFIG_PACKAGE_luci-app-fileassistant=y
+CONFIG_PACKAGE_luci-app-fileassistant=y
 CONFIG_PACKAGE_filebrowser=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
-#CONFIG_PACKAGE_luci-app-filetransfer=y
+CONFIG_PACKAGE_luci-app-filetransfer=y
 # 去广告
 CONFIG_PACKAGE_luci-app-adguardhome=y
+# VPN服务器
+# CONFIG_PACKAGE_luci-app-brook-server=y
+# CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
+# CONFIG_PACKAGE_luci-app-trojan-server=y
+# CONFIG_PACKAGE_luci-app-openvpn-server=y
+# CONFIG_PACKAGE_luci-app-pptp-server=y
+# CONFIG_PACKAGE_luci-app-softethervpn=y
 
 " >> .config
 

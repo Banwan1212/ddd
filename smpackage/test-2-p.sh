@@ -80,8 +80,11 @@ pushd package/community
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 
+popd
+
 # .config 添加自定义软件包
 echo "
+
 # 固件大小
 CONFIG_TARGET_KERNEL_PARTSIZE=128
 CONFIG_TARGET_ROOTFS_PARTSIZE=512
@@ -140,5 +143,6 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
+
 " >> .config
 

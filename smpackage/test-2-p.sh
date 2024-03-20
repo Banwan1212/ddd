@@ -185,7 +185,7 @@ CONFIG_PACKAGE_openssh-sftp-server=y
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
 # passwall
-CONFIG_PACKAGE_luci-app-passwall=y
+
 CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-passwall_Transparent_Proxy=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
@@ -210,7 +210,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray_Plugin=y
 # ssr
-CONFIG_PACKAGE_luci-app-ssr-plus=y
+
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y

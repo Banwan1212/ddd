@@ -90,10 +90,13 @@ mkdir filebrowser
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 mkdir luci-app-filetransfer
+mkdir luci-lib-fs
+
 cp -rf ../../kiddin9/filebrowser/* filebrowser
 cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
+cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
 # VPN服务器
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server

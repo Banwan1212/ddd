@@ -104,6 +104,11 @@ cp -rf ../../kiddin9/luci-app-openvpn-server/* luci-app-openvpn-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-softethervpn
+# Windows激活
+mkdir vlmcsd
+mkdir luci-app-vlmcsd
+cp -rf ../../kiddin9/vlmcsd/* vlmcsd
+cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 
 popd
 
@@ -160,6 +165,8 @@ CONFIG_PACKAGE_libnetwork=y
 CONFIG_DOCKER_OPTIONAL_FEATURES=y
 CONFIG_PACKAGE_tini=y
 CONFIG_PACKAGE_ffmpeg=y
+#ssh连接
+CONFIG_PACKAGE_openssh-sftp-server=y
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
 # passwall
@@ -191,6 +198,19 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
 CONFIG_PACKAGE_luci-app-pptp-server=y
 # CONFIG_PACKAGE_luci-app-softethervpn=y
+# wireguard
+CONFIG_PACKAGE_luci-app-wireguard=y
+CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
+CONFIG_PACKAGE_luci-proto-wireguard=y
+CONFIG_PACKAGE_wireguard=y
+CONFIG_PACKAGE_wireguard-tools=y
+CONFIG_PACKAGE_kmod-wireguard=y
+# Windows激活
+CONFIG_PACKAGE_vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=y
+
+
+
 
 " >> .config
 

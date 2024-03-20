@@ -115,7 +115,15 @@ cp -rf ../../kiddin9/luci-app-ttyd/* luci-app-ttyd
 # 关机
 mkdir luci-app-poweroff
 cp -rf ../../kiddin9/luci-app-poweroff/* luci-app-poweroff
-
+# 流量图形
+mkdir luci-app-vnstat
+cp -rf ../../kiddin9/luci-app-vnstat/* luci-app-vnstat
+# UPNP
+mkdir luci-app-upnp
+cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
+# 证书ssl
+mkdir luci-app-acme
+cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
 
 popd
 
@@ -219,7 +227,19 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 CONFIG_PACKAGE_luci-app-ttyd=y
 # 关机
 CONFIG_PACKAGE_luci-app-poweroff=y
-
+# 流量图形
+CONFIG_PACKAGE_luci-app-vnstat=y
+# UPNP
+CONFIG_PACKAGE_luci-app-upnp=y
+# 网络带宽监视器
+CONFIG_PACKAGE_luci-app-nlbwmon=y
+CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+# smartdns
+CONFIG_PACKAGE_luci-app-smartdns=y
+# 证书ssl
+CONFIG_PACKAGE_luci-app-acme=y
+# 流量图形
+CONFIG_PACKAGE_luci-app-vnstat=y
 
 
 " >> .config

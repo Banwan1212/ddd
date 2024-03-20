@@ -109,6 +109,9 @@ mkdir vlmcsd
 mkdir luci-app-vlmcsd
 cp -rf ../../kiddin9/vlmcsd/* vlmcsd
 cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
+ # 终端
+mkdir luci-app-ttyd
+cp -rf ../../kiddin9/luci-app-ttyd/* luci-app-ttyd
 
 popd
 
@@ -208,7 +211,8 @@ CONFIG_PACKAGE_kmod-wireguard=y
 # Windows激活
 CONFIG_PACKAGE_vlmcsd=y
 CONFIG_PACKAGE_luci-app-vlmcsd=y
-
+# 终端
+CONFIG_PACKAGE_luci-app-ttyd=y
 
 
 

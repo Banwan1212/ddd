@@ -177,6 +177,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
 # 文件助手
+CONFIG_PACKAGE_luci-lib-fs=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 CONFIG_PACKAGE_filebrowser=y
 CONFIG_PACKAGE_luci-app-filebrowser=y

@@ -79,15 +79,21 @@ mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 # 去广告
 #ADGuardHome（kiddin9）
-#mkdir luci-app-adguardhome
-#cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
-svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome
+mkdir luci-app-adguardhome
+mkdir adguardhome
+cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
+cp -rf ../../kiddin9/adguardhome/* adguardhome
+#svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
+#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome
 # 文件助手
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filebrowser
-svn export https://github.com/kiddin9/openwrt-packages/trunk/filebrowser
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-fileassistant
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-filetransfer
+mkdir filebrowser
+mkdir luci-app-filebrowser
+mkdir luci-app-fileassistant
+mkdir luci-app-filetransfer
+cp -rf ../../kiddin9/filebrowser/* filebrowser
+cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
+cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 # VPN服务器
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server

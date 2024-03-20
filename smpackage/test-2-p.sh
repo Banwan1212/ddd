@@ -91,18 +91,18 @@ mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 mkdir luci-app-filetransfer
 mkdir luci-lib-fs
-
 cp -rf ../../kiddin9/filebrowser/* filebrowser
 cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
 # VPN服务器
+mkdir luci-app-pptp-server
+mkdir luci-app-openvpn-server
+cp -rf ../../kiddin9/luci-app-pptp-server/* luci-app-pptp-server
+cp -rf ../../kiddin9/luci-app-openvpn-server/* luci-app-openvpn-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-pptp-server
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server
-
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-softethervpn
 
 popd

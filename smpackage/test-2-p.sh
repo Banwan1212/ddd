@@ -135,7 +135,17 @@ cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
 mkdir luci-app-onliner
 cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
 
-
+# 监控CPU性能
+CONFIG_PACKAGE_netdata=y
+CONFIG_PACKAGE_luci-app-netdata=y
+# 网络共享（Samba4）
+CONFIG_PACKAGE_luci-app-samba4=y
+# aria2下载工具
+CONFIG_PACKAGE_luci-app-aria2=y
+# 内网穿透
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-frps=y
+          
 
 popd
 

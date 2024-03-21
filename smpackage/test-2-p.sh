@@ -150,9 +150,11 @@ cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 
 # 内网穿透
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-frps=y
-          
+mkdir luci-app-frpc
+mkdir luci-app-frps
+cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
+cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
+
 
 popd
 
@@ -271,7 +273,16 @@ CONFIG_PACKAGE_luci-app-smartdns=y
 CONFIG_PACKAGE_luci-app-acme=y
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
-
+# 内网穿透
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-frps=y
+# 网络共享（Samba4）
+CONFIG_PACKAGE_luci-app-samba4=y
+# aria2下载工具
+CONFIG_PACKAGE_luci-app-aria2=y
+# 监控CPU性能
+CONFIG_PACKAGE_netdata=y
+CONFIG_PACKAGE_luci-app-netdata=y
 
 " >> .config
 

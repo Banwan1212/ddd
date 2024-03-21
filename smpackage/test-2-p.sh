@@ -284,6 +284,9 @@ CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 # 证书ssl
 CONFIG_PACKAGE_luci-app-acme=y
+CONFIG_PACKAGE_acme=y
+CONFIG_PACKAGE_acme-acmesh-dnsapi=y
+CONFIG_PACKAGE_socat=y
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
 # 内网穿透

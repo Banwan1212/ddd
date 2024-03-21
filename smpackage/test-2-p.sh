@@ -148,12 +148,17 @@ mkdir luci-app-aria2
 mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
-
 # 内网穿透
 mkdir luci-app-frpc
 mkdir luci-app-frps
 cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
 cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
+# 重启计划-----------------------------------
+mkdir luci-app-autoreboot
+cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
+#IP/MAC绑定
+mkdir luci-app-arpbind
+cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 
 
 popd

@@ -162,7 +162,7 @@ cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 #家长控制 https://github.com/sirpdboy/
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
-#家长控制 网络设置向导 一键设置IPV4/IPV6 旁路由
+#网络设置向导 一键设置IPV4/IPV6 旁路由
 mkdir luci-app-wizard
 cp -rf ../../kiddin9/luci-app-wizard/* luci-app-wizard
 
@@ -299,7 +299,7 @@ CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-arpbind=y
 #家长控制 https://github.com/sirpdboy/
 CONFIG_PACKAGE_luci-app-parentcontrol=y
-#家长控制 网络设置向导 一键设置IPV4/IPV6 旁路由
+#网络设置向导 一键设置IPV4/IPV6 旁路由
 CONFIG_PACKAGE_luci-app-wizard=y
 
 

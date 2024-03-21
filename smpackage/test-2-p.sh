@@ -141,9 +141,14 @@ mkdir luci-app-netdata
 cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
 cp -rf ../../kiddin9/netdata/* netdata
 # 网络共享（Samba4）
-CONFIG_PACKAGE_luci-app-samba4=y
+mkdir luci-app-samba4
+cp -rf ../../kiddin9/luci-app-samba4/* luci-app-samba4
 # aria2下载工具
-CONFIG_PACKAGE_luci-app-aria2=y
+mkdir luci-app-aria2
+mkdir aria2
+cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
+cp -rf ../../kiddin9/aria2/* aria2
+
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-frps=y

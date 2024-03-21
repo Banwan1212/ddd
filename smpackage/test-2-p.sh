@@ -72,6 +72,10 @@ mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
 popd
+mkdir ddd
+pushd ddd
+git clone --depth=1 https://github.com/Banwan1212/openwrt-packages .
+popd
 mkdir package/community
 pushd package/community
 #Diskman

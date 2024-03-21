@@ -206,6 +206,8 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
+# 自动格式化分区、扩容、自动挂载
+CONFIG_PACKAGE_luci-app-partexp=y
 # 文件助手
 CONFIG_PACKAGE_luci-lib-fs=y
 CONFIG_PACKAGE_luci-app-fileassistant=y

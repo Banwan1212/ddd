@@ -165,6 +165,9 @@ cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 mkdir luci-app-wizard
 cp -rf ../../kiddin9/luci-app-wizard/* luci-app-wizard
+#直播
+mkdir luci-app-nginx-pingos
+cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
 
 popd
 
@@ -301,7 +304,11 @@ CONFIG_PACKAGE_luci-app-arpbind=y
 CONFIG_PACKAGE_luci-app-parentcontrol=y
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 CONFIG_PACKAGE_luci-app-wizard=y
-
+#直播
+CONFIG_PACKAGE_luci-nginx=y
+CONFIG_PACKAGE_luci-ssl-nginx=y
+CONFIG_PACKAGE_luci-ssl-openssl=y
+CONFIG_PACKAGE_luci-app-nginx-pingos=y
 
 
 " >> .config

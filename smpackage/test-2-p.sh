@@ -185,14 +185,10 @@ CONFIG_PACKAGE_openssh-sftp-server=y
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
 # passwall
-
 CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=y
 
 # ssr
-
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
 # DiskMan 磁盘管理
 CONFIG_PACKAGE_blkid=y
 CONFIG_PACKAGE_fdisk=y          

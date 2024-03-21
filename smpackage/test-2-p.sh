@@ -159,7 +159,9 @@ cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
-
+#家长控制 https://github.com/sirpdboy/
+mkdir luci-app-parentcontrol
+cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
 popd
 

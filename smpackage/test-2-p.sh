@@ -128,6 +128,10 @@ cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 # 证书ssl
 mkdir luci-app-acme
 cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
+# 自动格式化分区、扩容、自动挂载
+# git_clone https://github.com/sirpdboy/luci-app-partexp
+mkdir luci-app-partexp
+cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
 
 popd
 

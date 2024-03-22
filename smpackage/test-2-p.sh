@@ -78,6 +78,16 @@ git clone --depth=1 https://github.com/Banwan1212/openwrt-packages .
 popd
 mkdir package/community
 pushd package/community
+# helloworld
+mkdir helloworld
+pushd helloworld
+git clone --depth=1 https://github.com/fw876/helloworld .
+popd
+# passwall
+mkdir passwall
+pushd passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
+popd
 #Diskman
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman

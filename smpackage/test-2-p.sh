@@ -17,6 +17,9 @@
 
 # 修改主机名字，把 iStore OS 修改你喜欢的就行（不能纯数字或者使用中文）
 # sed -i 's/OpenWrt/iStore OS/g' package/base-files/files/bin/config_generate
+# sed -i 's/Authorization Required/wanuse.com/g' feeds/luci/modules/luci-base/ucode/template/sysauth.ut
+sed -i 's/Authorization Required/openwrt-23.05.2 wanuse.com/g' feeds/luci/themes/luci-theme-bootstrap/htdocs/luci-static/resources/view/bootstrap/sysauth.js
+sed -i 's/需要授权/openwrt-23.05 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
 
 # 替换终端为bash
 # sed -i 's/\/bin\/ash/\/bin\/bash/' package/base-files/files/etc/passwd

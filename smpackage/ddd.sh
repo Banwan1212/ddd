@@ -139,8 +139,8 @@ cp -rf ../../kiddin9/luci-app-vnstat/* luci-app-vnstat
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 # 证书ssl
-mkdir luci-app-acme
-cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
+# mkdir luci-app-acme
+# cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
 # 自动格式化分区、扩容、自动挂载
 mkdir luci-app-partexp
 cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
@@ -162,10 +162,10 @@ mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 # 内网穿透
-mkdir luci-app-frpc
-mkdir luci-app-frps
-cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
-cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
+# mkdir luci-app-frpc
+# mkdir luci-app-frps
+# cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
+# cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
 # 重启计划-----------------------------------
 mkdir luci-app-autoreboot
 cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
@@ -179,8 +179,8 @@ cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 mkdir luci-app-wizard
 cp -rf ../../kiddin9/luci-app-wizard/* luci-app-wizard
 #直播
-mkdir luci-app-nginx-pingos
-cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
+# mkdir luci-app-nginx-pingos
+# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
 
 popd
 
@@ -296,15 +296,15 @@ CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
 # smartdns
 CONFIG_PACKAGE_luci-app-smartdns=y
 # 证书ssl
-CONFIG_PACKAGE_luci-app-acme=y
-CONFIG_PACKAGE_acme=y
-CONFIG_PACKAGE_acme-acmesh-dnsapi=y
-CONFIG_PACKAGE_socat=y
+# CONFIG_PACKAGE_luci-app-acme=y
+# CONFIG_PACKAGE_acme=y
+# CONFIG_PACKAGE_acme-acmesh-dnsapi=y
+# CONFIG_PACKAGE_socat=y
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
 # 内网穿透
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-frps=y
+# CONFIG_PACKAGE_luci-app-frpc=y
+# CONFIG_PACKAGE_luci-app-frps=y
 # 网络共享（Samba4）
 CONFIG_PACKAGE_luci-app-samba4=y
 # aria2下载工具
@@ -321,9 +321,9 @@ CONFIG_PACKAGE_luci-app-parentcontrol=y
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 CONFIG_PACKAGE_luci-app-wizard=y
 #直播
-CONFIG_PACKAGE_luci-nginx=y
-CONFIG_PACKAGE_luci-ssl-nginx=y
-CONFIG_PACKAGE_luci-ssl-openssl=y
-CONFIG_PACKAGE_luci-app-nginx-pingos=y
+# CONFIG_PACKAGE_luci-nginx=y
+# CONFIG_PACKAGE_luci-ssl-nginx=y
+# CONFIG_PACKAGE_luci-ssl-openssl=y
+# CONFIG_PACKAGE_luci-app-nginx-pingos=y
 
 " >> .config

@@ -375,9 +375,9 @@ CONFIG_PACKAGE_luci-app-parentcontrol=y
 CONFIG_PACKAGE_luci-app-wizard=y
 
 #直播
-CONFIG_PACKAGE_luci-nginx=y
+# CONFIG_PACKAGE_luci-nginx=y
 # CONFIG_PACKAGE_luci-ssl-nginx=y
 # CONFIG_PACKAGE_luci-ssl-openssl=y
-CONFIG_PACKAGE_luci-app-nginx-pingos=y
+# CONFIG_PACKAGE_luci-app-nginx-pingos=y
 
 " >> .config

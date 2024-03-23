@@ -75,25 +75,31 @@ mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
 popd
+
 mkdir ddd
 pushd ddd
 git clone --depth=1 https://github.com/Banwan1212/openwrt-packages .
 popd
+
 mkdir package/community
 pushd package/community
+
 # helloworld
 mkdir helloworld
 pushd helloworld
 git clone --depth=1 https://github.com/fw876/helloworld .
 popd
+
 # passwall
 mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
+
 #Diskman
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
+
 # 去广告
 #ADGuardHome（kiddin9）
 mkdir luci-app-adguardhome
@@ -147,9 +153,11 @@ cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 # 证书ssl
 # mkdir luci-app-acme
 # cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
+
 # 自动格式化分区、扩容、自动挂载
 # mkdir luci-app-partexp
 # cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
+
 # 在线用户
 mkdir luci-app-onliner
 cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
@@ -160,9 +168,11 @@ mkdir luci-app-netdata
 # cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
 cp -rf ../../kiddin9/netdata/* netdata
 git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
+
 # 网络共享（Samba4）
 mkdir luci-app-samba4
 cp -rf ../../kiddin9/luci-app-samba4/* luci-app-samba4
+
 # aria2下载工具
 mkdir luci-app-aria2
 mkdir aria2
@@ -178,18 +188,22 @@ cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
 # 重启计划
 mkdir luci-app-autoreboot
 cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
+
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
+
 #家长控制 https://github.com/sirpdboy/
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
+
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 mkdir luci-app-wizard
 cp -rf ../../kiddin9/luci-app-wizard/* luci-app-wizard
+
 #直播
-# mkdir luci-app-nginx-pingos
-# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
+mkdir luci-app-nginx-pingos
+cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
 
 popd
 
@@ -246,15 +260,19 @@ CONFIG_PACKAGE_libnetwork=y
 CONFIG_DOCKER_OPTIONAL_FEATURES=y
 CONFIG_PACKAGE_tini=y
 CONFIG_PACKAGE_ffmpeg=y
+
 #ssh连接
 CONFIG_PACKAGE_openssh-sftp-server=y
+
 # cloudflare隧道
 CONFIG_PACKAGE_cloudflared=y
+
 # passwall
 CONFIG_PACKAGE_luci-app-passwall=y
 
 # ssr
 CONFIG_PACKAGE_luci-app-ssr-plus=y
+
 # DiskMan 磁盘管理
 CONFIG_PACKAGE_blkid=y
 CONFIG_PACKAGE_fdisk=y          
@@ -270,14 +288,17 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
 
 # 在线用户
 CONFIG_PACKAGE_luci-app-onliner=y
+
 # 文件助手
 CONFIG_PACKAGE_luci-lib-fs=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 CONFIG_PACKAGE_filebrowser=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 # CONFIG_PACKAGE_luci-app-filetransfer=y
+
 # 去广告
 CONFIG_PACKAGE_luci-app-adguardhome=y
+
 # VPN服务器
 # CONFIG_PACKAGE_luci-app-brook-server=y
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
@@ -285,6 +306,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
 CONFIG_PACKAGE_luci-app-pptp-server=y
 # CONFIG_PACKAGE_luci-app-softethervpn=y
+
 # wireguard
 CONFIG_PACKAGE_luci-app-wireguard=y
 CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
@@ -292,20 +314,27 @@ CONFIG_PACKAGE_luci-proto-wireguard=y
 CONFIG_PACKAGE_wireguard=y
 CONFIG_PACKAGE_wireguard-tools=y
 CONFIG_PACKAGE_kmod-wireguard=y
+
 # Windows激活
 CONFIG_PACKAGE_vlmcsd=y
 CONFIG_PACKAGE_luci-app-vlmcsd=y
+
 # 终端
 CONFIG_PACKAGE_luci-app-ttyd=y
+
 # 关机
 CONFIG_PACKAGE_luci-app-poweroffdevice=y
+
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
+
 # UPNP
 CONFIG_PACKAGE_luci-app-upnp=y
+
 # 网络带宽监视器
 CONFIG_PACKAGE_luci-app-nlbwmon=y
 CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+
 # smartdns
 CONFIG_PACKAGE_luci-app-smartdns=y
 
@@ -317,22 +346,30 @@ CONFIG_PACKAGE_luci-app-smartdns=y
 
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
+
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-frps=y
+
 # 网络共享（Samba4）
 CONFIG_PACKAGE_luci-app-samba4=y
+
 # aria2下载工具
 CONFIG_PACKAGE_luci-app-aria2=y
+
 # 监控CPU性能
 CONFIG_PACKAGE_netdata=y
 CONFIG_PACKAGE_luci-app-netdata=y
+
 # 重启计划-
 CONFIG_PACKAGE_luci-app-autoreboot=y
+
 #IP/MAC绑定
 CONFIG_PACKAGE_luci-app-arpbind=y
+
 #家长控制 https://github.com/sirpdboy/
 CONFIG_PACKAGE_luci-app-parentcontrol=y
+
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 CONFIG_PACKAGE_luci-app-wizard=y
 

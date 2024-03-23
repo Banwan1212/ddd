@@ -165,9 +165,9 @@ cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
 # 监控CPU性能
 mkdir netdata
 mkdir luci-app-netdata
-# cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
+cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
 cp -rf ../../kiddin9/netdata/* netdata
-git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
+# git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
 # 网络共享（Samba4）
 mkdir luci-app-samba4
@@ -197,13 +197,9 @@ cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
-#网络设置向导 一键设置IPV4/IPV6 旁路由
-mkdir luci-app-wizard
-cp -rf ../../kiddin9/luci-app-wizard/* luci-app-wizard
-
 #直播
-mkdir luci-app-nginx-pingos
-cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
+# mkdir luci-app-nginx-pingos
+# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
 
 popd
 

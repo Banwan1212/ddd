@@ -182,8 +182,8 @@ cp -rf ../../kiddin9/aria2/* aria2
 # 内网穿透
 mkdir luci-app-frpc
 mkdir luci-app-frps
-cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
-cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
+cp -rf ../../ddd/luci-app-frpc/* luci-app-frpc
+cp -rf ../../ddd/luci-app-frps/* luci-app-frps
 
 # 重启计划
 mkdir luci-app-autoreboot

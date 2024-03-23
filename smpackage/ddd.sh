@@ -47,29 +47,6 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # 移除重复软件包
 # rm -rf feeds/luci/themes/luci-theme-argon
 
-
-# 添加额外软件包
-
-
-# 科学上网插件
-
-
-# 科学上网插件依赖
-
-# adguardhome
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/adguardhome package/adguardhome
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome package/luci-app-adguardhome
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome package/adguardhome
-
-# mosdns
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns package/luci-app-mosdns
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/mosdns package/mosdns
-# svn export https://github.com/kenzok8/openwrt-packages/trunk/v2dat package/v2dat
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-mosdns package/luci-app-mosdns
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/mosdns package/mosdns
-# svn export https://github.com/kiddin9/openwrt-packages/trunk/v2dat package/v2dat
-
 # 添加第三方应用
 mkdir kiddin9
 pushd kiddin9
@@ -124,9 +101,6 @@ mkdir luci-app-pptp-server
 mkdir luci-app-openvpn-server
 cp -rf ../../kiddin9/luci-app-pptp-server/* luci-app-pptp-server
 cp -rf ../../kiddin9/luci-app-openvpn-server/* luci-app-openvpn-server
-# svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
-# svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server
-# svn export https://github.com/kenzok8/small-package/trunk/luci-app-softethervpn
 
 # Windows激活
 mkdir vlmcsd
@@ -280,9 +254,6 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
 
-# 自动格式化分区、扩容、自动挂载
-# CONFIG_PACKAGE_luci-app-partexp=y
-
 # 在线用户
 CONFIG_PACKAGE_luci-app-onliner=y
 
@@ -300,6 +271,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 # CONFIG_PACKAGE_luci-app-brook-server=y
 # CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
 # CONFIG_PACKAGE_luci-app-trojan-server=y
+CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
 CONFIG_PACKAGE_luci-app-pptp-server=y
 # CONFIG_PACKAGE_luci-app-softethervpn=y

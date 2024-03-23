@@ -312,8 +312,8 @@ CONFIG_PACKAGE_luci-app-smartdns=y
 # 流量图形
 CONFIG_PACKAGE_luci-app-vnstat=y
 # 内网穿透
-# CONFIG_PACKAGE_luci-app-frpc=y
-# CONFIG_PACKAGE_luci-app-frps=y
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-frps=y
 # 网络共享（Samba4）
 CONFIG_PACKAGE_luci-app-samba4=y
 # aria2下载工具

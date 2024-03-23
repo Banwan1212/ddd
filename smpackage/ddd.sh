@@ -100,8 +100,7 @@ mkdir luci-app-adguardhome
 mkdir adguardhome
 cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
 cp -rf ../../kiddin9/adguardhome/* adguardhome
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome
+
 # 文件助手
 mkdir filebrowser
 mkdir luci-app-filebrowser
@@ -113,6 +112,7 @@ cp -rf ../../ddd/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
+
 # VPN服务器
 mkdir luci-app-pptp-server
 mkdir luci-app-openvpn-server
@@ -121,23 +121,29 @@ cp -rf ../../kiddin9/luci-app-openvpn-server/* luci-app-openvpn-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ssr-mudb-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-ipsec-server
 # svn export https://github.com/kenzok8/small-package/trunk/luci-app-softethervpn
+
 # Windows激活
 mkdir vlmcsd
 mkdir luci-app-vlmcsd
 cp -rf ../../kiddin9/vlmcsd/* vlmcsd
 cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
+
 # 终端
 mkdir luci-app-ttyd
 cp -rf ../../kiddin9/luci-app-ttyd/* luci-app-ttyd
+
 # 关机
 mkdir luci-app-poweroffdevice
 cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
+
 # 流量图形
 mkdir luci-app-vnstat
 cp -rf ../../kiddin9/luci-app-vnstat/* luci-app-vnstat
+
 # UPNP
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
+
 # 证书ssl
 # mkdir luci-app-acme
 # cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme

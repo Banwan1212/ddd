@@ -108,10 +108,6 @@ mkdir luci-app-vlmcsd
 cp -rf ../../kiddin9/vlmcsd/* vlmcsd
 cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 
-# 终端
-mkdir luci-app-ttyd
-cp -rf ../../kiddin9/luci-app-ttyd/* luci-app-ttyd
-
 # 关机
 mkdir luci-app-poweroffdevice
 cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice

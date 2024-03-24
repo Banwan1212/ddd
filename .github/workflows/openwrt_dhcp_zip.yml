@@ -6,7 +6,7 @@
 # Copyright (C) 2020 KFERMercer
 #
 
-name: OpenWrt-ddd
+name: openwrt_dhcp_zip
 
 on:
   #schedule:
@@ -51,7 +51,7 @@ jobs:
   build:
 
 
-    name: Build OpenWrt-ddd
+    name: Build openwrt_dhcp_zip
 
     runs-on: ubuntu-latest
     

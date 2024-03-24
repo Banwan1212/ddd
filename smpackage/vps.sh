@@ -310,7 +310,7 @@ CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_socat=y
 
 # 流量图形
-CONFIG_PACKAGE_luci-app-vnstat2=y
+CONFIG_PACKAGE_luci-app-vnstat=y
 
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y

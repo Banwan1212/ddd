@@ -300,14 +300,10 @@ CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
 # smartdns
 CONFIG_PACKAGE_luci-app-smartdns=y
 
-# 证书ssl
-# CONFIG_PACKAGE_luci-app-acme=y
-# CONFIG_PACKAGE_acme=y
-# CONFIG_PACKAGE_acme-acmesh-dnsapi=y
-# CONFIG_PACKAGE_socat=y
-
 # 流量图形
-CONFIG_PACKAGE_luci-app-vnstat=y
+CONFIG_PACKAGE_libsqlite3=y
+CONFIG_PACKAGE_luci-app-vnstat2=y
+
 
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
@@ -332,9 +328,6 @@ CONFIG_PACKAGE_luci-app-arpbind=y
 #家长控制 https://github.com/sirpdboy/
 CONFIG_PACKAGE_luci-app-parentcontrol=y
 
-#网络设置向导 一键设置IPV4/IPV6 旁路由
-CONFIG_PACKAGE_luci-app-wizard=y
-#
 CONFIG_PACKAGE_luci-app-watchcat=y
 CONFIG_PACKAGE_luci-app-natmap=y
 

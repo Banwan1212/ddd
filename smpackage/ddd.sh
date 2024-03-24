@@ -112,10 +112,6 @@ cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 mkdir luci-app-poweroffdevice
 cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 
-# 流量图形
-mkdir luci-app-vnstat
-cp -rf ../../kiddin9/luci-app-vnstat/* luci-app-vnstat
-
 # UPNP
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp

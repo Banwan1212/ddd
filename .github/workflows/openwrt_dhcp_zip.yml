@@ -38,7 +38,7 @@ env:
   CONFIG_FILE: Lean--p.info
   Firmware_Name: OpenWrt-CI-test
   DIY_P1_SH: smpackage/ddd1.sh
-  DIY_P2_SH: smpackage/ddd.sh
+  DIY_P2_SH: smpackage/openwrt_dhcp.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false

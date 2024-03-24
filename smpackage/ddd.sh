@@ -290,9 +290,6 @@ CONFIG_PACKAGE_luci-app-ttyd=y
 # 关机
 CONFIG_PACKAGE_luci-app-poweroffdevice=y
 
-# 流量图形
-CONFIG_PACKAGE_luci-app-vnstat=y
-
 # UPNP
 CONFIG_PACKAGE_luci-app-upnp=y
 
@@ -310,6 +307,7 @@ CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_socat=y
 
 # 流量图形
+CONFIG_PACKAGE_libsqlite3=y
 CONFIG_PACKAGE_luci-app-vnstat2=y
 
 # 内网穿透

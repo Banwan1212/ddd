@@ -51,7 +51,7 @@ jobs:
   build:
 
 
-    name: Build OpenWrt firmware -test
+    name: Build OpenWrt-DOCKRE
 
     runs-on: ubuntu-latest
     

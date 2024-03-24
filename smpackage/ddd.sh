@@ -337,11 +337,8 @@ CONFIG_PACKAGE_luci-app-parentcontrol=y
 
 #网络设置向导 一键设置IPV4/IPV6 旁路由
 CONFIG_PACKAGE_luci-app-wizard=y
-
-#直播
-# CONFIG_PACKAGE_luci-nginx=y
-# CONFIG_PACKAGE_luci-ssl-nginx=y
-# CONFIG_PACKAGE_luci-ssl-openssl=y
+#
+CONFIG_PACKAGE_luci-app-watchcat=y
 CONFIG_PACKAGE_luci-app-natmap=y
 
 " >> .config

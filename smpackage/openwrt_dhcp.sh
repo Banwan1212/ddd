@@ -46,6 +46,7 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 # 移除重复软件包
 # rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-acme
 
 # 添加第三方应用
 mkdir kiddin9

@@ -95,7 +95,9 @@ mkdir adbyby
 cp -rf ../../kiddin9/luci-app-adbyby-plus/* luci-app-adbyby-plus
 cp -rf ../../kiddin9/adbyby/* adbyby
 
-
+# acme证书
+mkdir luci-app-acme
+cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
 
 # 文件助手
 mkdir filebrowser

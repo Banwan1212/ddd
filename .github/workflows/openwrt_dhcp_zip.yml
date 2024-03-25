@@ -279,6 +279,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-watchcat=y
           #端口开方
           CONFIG_PACKAGE_luci-app-natmap=y
+          #IP/MAC绑定
+          CONFIG_PACKAGE_luci-app-arpbind=y
           
           
           EOF

@@ -74,7 +74,9 @@ pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
 #-------------------------
-
+# openclash
+mkdir luci-app-openclash
+cp -rf ../../kiddin9/luci-app-openclash/* luci-app-openclash
 
 # python ssr
 mkdir luci-app-ssrserver-python

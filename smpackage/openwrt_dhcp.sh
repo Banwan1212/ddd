@@ -147,15 +147,6 @@ mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 
-# 内网穿透
-# mkdir luci-app-frpc
-# mkdir luci-app-frps
-# cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
-# cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
-
-# 重启计划
-mkdir luci-app-autoreboot
-cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
 
 #IP/MAC绑定
 mkdir luci-app-arpbind
@@ -165,12 +156,10 @@ cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
-#直播
-# mkdir luci-app-nginx-pingos
-# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
-
 # 测速
+mkdir homebox
 mkdir luci-app-netspeedtest
+cp -rf ../../kiddin9/homebox/* homebox
 cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
 
 popd

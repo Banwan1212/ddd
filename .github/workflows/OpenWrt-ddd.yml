@@ -255,8 +255,7 @@ jobs:
           # smartdns
           CONFIG_PACKAGE_luci-app-smartdns=y
           # 证书ssl
-          # CONFIG_PACKAGE_luci-app-acme=y
-          # CONFIG_PACKAGE_acme=y
+          CONFIG_PACKAGE_luci-app-acme=y          
           # CONFIG_PACKAGE_acme-acmesh-dnsapi=y
           # CONFIG_PACKAGE_socat=y
           # 流量图形

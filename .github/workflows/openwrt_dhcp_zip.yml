@@ -149,7 +149,8 @@ jobs:
           rm -rf ./tmp && rm -rf .config
           touch ./.config          
           cat >> .config <<EOF 
-          # CONFIG_VMDK_IMAGES is not set
+          CONFIG_VMDK_IMAGES=y
+          CONFIG_VHDX_IMAGES=y
           # CONFIG_GRUB_EFI_IMAGES is not set
           # CONFIG_TARGET_ROOTFS_EXT4FS is not set
           CONFIG_TARGET_x86=y

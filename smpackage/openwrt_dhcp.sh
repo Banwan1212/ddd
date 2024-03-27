@@ -51,6 +51,10 @@ rm -rf feeds/packages/net/acme
 
 svn co https://github.com/openwrt/packages/tree/openwrt-22.03/net/acme feeds/packages/net/
 
+cd feeds/packages
+git_clone_path master https://github.com/openwrt/packages net/acme
+
+cd ../../
 # 添加第三方应用
 
 mkdir wandduse

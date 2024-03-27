@@ -49,19 +49,7 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 rm -rf feeds/luci/applications/luci-app-acme
 rm -rf feeds/packages/net/acme
 
-svn co https://github.com/openwrt/packages/tree/openwrt-22.03/net/acme feeds/packages/net/
-
-cd feeds/packages
-git_clone_path master https://github.com/openwrt/packages net/acme
-
-cd ../../
-#替换
-# cd feeds/packages
-# rm -rf libs/xr_usb_serial_common net/coova-chilli net/xtables-addons
-# git_clone_path master https://github.com/openwrt/packages libs/xr_usb_serial_common
-# git_clone_path master https://github.com/openwrt/packages net/coova-chilli
-# git_clone_path master https://github.com/openwrt/packages net/xtables-addons
-# cd ../../
+git sparse_clone openwrt-21.02 "https://github.com/openwrt/packages" "21packages"
 
 # 添加第三方应用
 

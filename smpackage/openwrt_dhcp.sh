@@ -86,8 +86,6 @@ mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
-
-popd
 #-------------------------
 # openclash
 mkdir luci-app-openclash

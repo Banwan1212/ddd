@@ -158,6 +158,9 @@ mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 
+#定时任务
+mkdir luci-app-autotimeset
+cp -rf ../../kiddin9/luci-app-autotimeset/* luci-app-autotimeset
 
 #IP/MAC绑定
 mkdir luci-app-arpbind

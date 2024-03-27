@@ -55,6 +55,14 @@ cd feeds/packages
 git_clone_path master https://github.com/openwrt/packages net/acme
 
 cd ../../
+#替换
+# cd feeds/packages
+# rm -rf libs/xr_usb_serial_common net/coova-chilli net/xtables-addons
+# git_clone_path master https://github.com/openwrt/packages libs/xr_usb_serial_common
+# git_clone_path master https://github.com/openwrt/packages net/coova-chilli
+# git_clone_path master https://github.com/openwrt/packages net/xtables-addons
+# cd ../../
+
 # 添加第三方应用
 
 mkdir wandduse

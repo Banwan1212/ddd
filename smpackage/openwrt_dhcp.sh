@@ -176,7 +176,9 @@ cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
 mkdir luci-app-zerotier
 cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
 #实时流量监控
+mkdir wrtbwmon
 mkdir luci-app-wrtbwmon
+cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
 cp -rf ../../kiddin9/luci-app-wrtbwmon/* luci-app-wrtbwmon
 
 

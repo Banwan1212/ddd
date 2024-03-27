@@ -49,6 +49,12 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 rm -rf feeds/luci/applications/luci-app-acme
 
 # 添加第三方应用
+
+mkdir wandduse
+pushd wandduse
+git clone --depth=1 https://github.com/wandduse/openwrt-packages .
+popd
+
 mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
@@ -100,7 +106,7 @@ cp -rf ../../kiddin9/adbyby/* adbyby
 
 # acme证书
 mkdir luci-app-acme
-cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
+cp -rf ../../wandduse/luci-app-acme/* luci-app-acme
 
 # 文件助手
 mkdir filebrowser
@@ -138,8 +144,8 @@ cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 # 监控CPU性能
 mkdir netdata
 mkdir luci-app-netdata
-cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
-cp -rf ../../kiddin9/netdata/* netdata
+cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
+cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
 # 网络共享（Samba4）

@@ -48,6 +48,9 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-acme
 rm -rf feeds/packages/net/acme
+
+svn co https://github.com/openwrt/packages/tree/7c3f86430eebc76dcc00a69d354b7d46a2b5ba86/net/acme feeds/packages/net/
+
 # 添加第三方应用
 
 mkdir wandduse
@@ -79,12 +82,6 @@ mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
-
-# acme
-mkdir acme
-pushd acme
-svn co https://github.com/openwrt/packages/trunk/net/acme
-# git clone --depth=1 https://github.com/openwrt/packages/tree/openwrt-22.03 .
 
 popd
 #-------------------------

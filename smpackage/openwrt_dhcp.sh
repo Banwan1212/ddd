@@ -83,7 +83,7 @@ popd
 # acme
 mkdir acme
 pushd acme
-git clone --depth=1 https://github.com/openwrt/packages/tree/7c3f86430eebc76dcc00a69d354b7d46a2b5ba86/net/acme .
+git clone --depth=1 https://github.com/openwrt/packages/tree/openwrt-22.03 .
 popd
 #-------------------------
 # openclash

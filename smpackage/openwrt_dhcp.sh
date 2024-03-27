@@ -46,10 +46,6 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 # 移除重复软件包
 # rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-acme
-rm -rf feeds/packages/net/acme
-
-git sparse_clone openwrt-21.02 "https://github.com/openwrt/packages" "21packages"
 
 # 添加第三方应用
 
@@ -107,10 +103,6 @@ mkdir adbyby
 cp -rf ../../kiddin9/luci-app-adbyby-plus/* luci-app-adbyby-plus
 cp -rf ../../kiddin9/adbyby/* adbyby
 
-# acme证书
-mkdir luci-app-acme
-cp -rf ../../wandduse/luci-app-acme/* luci-app-acme
-
 # 文件助手
 mkdir filebrowser
 mkdir luci-app-filebrowser
@@ -143,7 +135,6 @@ cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 
-
 # 监控CPU性能
 mkdir netdata
 mkdir luci-app-netdata
@@ -164,7 +155,7 @@ cp -rf ../../kiddin9/aria2/* aria2
 #定时任务
 mkdir luci-app-autotimeset
 cp -rf ../../kiddin9/luci-app-autotimeset/* luci-app-autotimeset
-
+sed -i 's,"control","system",g' luci-app-autotimeset/luasrc/controller/autotimeset.lua
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind

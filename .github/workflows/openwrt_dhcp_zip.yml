@@ -282,6 +282,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-natmap=y
           #IP/MAC绑定
           CONFIG_PACKAGE_luci-app-arpbind=y
+          #定时任务
+          CONFIG_PACKAGE_luci-app-autotimeset=y
           
           
           EOF

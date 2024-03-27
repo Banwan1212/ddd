@@ -47,7 +47,7 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # 移除重复软件包
 # rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-acme
-
+rm -rf feeds/packages/net/acme
 # 添加第三方应用
 
 mkdir wandduse
@@ -78,6 +78,12 @@ popd
 mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
+popd
+
+# acme
+mkdir acme
+pushd acme
+git clone --depth=1 https://github.com/openwrt/packages/tree/openwrt-22.03/net/acme .
 popd
 #-------------------------
 # openclash

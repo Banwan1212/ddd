@@ -6,7 +6,7 @@
 # Copyright (C) 2020 KFERMercer
 #
 
-name: openwrt_dhcp_zip
+name: openwrt_vps
 
 on:
   #schedule:

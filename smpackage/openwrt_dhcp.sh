@@ -64,6 +64,12 @@ pushd ddd
 git clone --depth=1 https://github.com/Banwan1212/openwrt-packages .
 popd
 
+mkdir N-wrt
+pushd N-wrt
+git clone --depth=1 https://github.com/N-wrt/openwrt-ext .
+popd
+
+
 mkdir package/community
 pushd package/community
 
@@ -154,8 +160,8 @@ cp -rf ../../kiddin9/aria2/* aria2
 
 #定时任务
 mkdir luci-app-autotimeset
-cp -rf ../../kiddin9/luci-app-autotimeset/* luci-app-autotimeset
-sed -i 's,"control","system",g' luci-app-autotimeset/luasrc/controller/autotimeset.lua
+cp -rf ../../ddd/luci-app-autotimeset/* luci-app-autotimeset
+
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
@@ -179,7 +185,7 @@ cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
 mkdir wrtbwmon
 mkdir luci-app-wrtbwmon
 cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
-cp -rf ../../kiddin9/luci-app-wrtbwmon/* luci-app-wrtbwmon
+cp -rf ../../ddd/luci-app-wrtbwmon/* luci-app-wrtbwmon
 
 
 popd

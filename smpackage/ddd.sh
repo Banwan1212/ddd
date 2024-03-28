@@ -48,6 +48,12 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # rm -rf feeds/luci/themes/luci-theme-argon
 
 # 添加第三方应用
+
+mkdir wandduse
+pushd wandduse
+git clone --depth=1 https://github.com/wandduse/openwrt-packages .
+popd
+
 mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
@@ -72,6 +78,14 @@ mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
+#-------------------------
+# openclash
+mkdir luci-app-openclash
+cp -rf ../../kiddin9/luci-app-openclash/* luci-app-openclash
+
+# python ssr
+mkdir luci-app-ssrserver-python
+cp -rf ../../kiddin9/luci-app-ssrserver-python/* luci-app-ssrserver-python
 
 #Diskman
 mkdir luci-app-diskman
@@ -83,6 +97,11 @@ mkdir luci-app-adguardhome
 mkdir adguardhome
 cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
 cp -rf ../../kiddin9/adguardhome/* adguardhome
+# 广告屏蔽大师 Plus+
+mkdir luci-app-adbyby-plus
+mkdir adbyby
+cp -rf ../../kiddin9/luci-app-adbyby-plus/* luci-app-adbyby-plus
+cp -rf ../../kiddin9/adbyby/* adbyby
 
 # 文件助手
 mkdir filebrowser
@@ -116,23 +135,11 @@ cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 
-# 证书ssl
-# mkdir luci-app-acme
-# cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
-
-# 自动格式化分区、扩容、自动挂载
-# mkdir luci-app-partexp
-# cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
-
-# 在线用户
-mkdir luci-app-onliner
-cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
-
 # 监控CPU性能
 mkdir netdata
 mkdir luci-app-netdata
-cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
-cp -rf ../../kiddin9/netdata/* netdata
+cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
+cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
 # 网络共享（Samba4）
@@ -145,16 +152,10 @@ mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 
-# 内网穿透
-# mkdir luci-app-frpc
-# mkdir luci-app-frps
-# cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
-# cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
-
-# 重启计划
-mkdir luci-app-autoreboot
-cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
-
+#定时任务
+mkdir luci-app-autotimeset
+cp -rf ../../kiddin9/luci-app-autotimeset/* luci-app-autotimeset
+sed -i 's,"control","system",g' luci-app-autotimeset/luasrc/controller/autotimeset.lua
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
@@ -163,8 +164,22 @@ cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
-#直播
-# mkdir luci-app-nginx-pingos
-# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
+# 测速
+mkdir homebox
+mkdir luci-app-netspeedtest
+cp -rf ../../kiddin9/homebox/* homebox
+cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
+
+#docker
+mkdir luci-app-docker
+cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
+mkdir luci-app-zerotier
+cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
+#实时流量监控
+mkdir wrtbwmon
+mkdir luci-app-wrtbwmon
+cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
+cp -rf ../../kiddin9/luci-app-wrtbwmon/* luci-app-wrtbwmon
+
 
 popd

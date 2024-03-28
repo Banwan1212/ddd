@@ -48,6 +48,12 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 # rm -rf feeds/luci/themes/luci-theme-argon
 
 # 添加第三方应用
+
+mkdir wandduse
+pushd wandduse
+git clone --depth=1 https://github.com/wandduse/openwrt-packages .
+popd
+
 mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
@@ -72,6 +78,14 @@ mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
+#-------------------------
+# openclash
+mkdir luci-app-openclash
+cp -rf ../../kiddin9/luci-app-openclash/* luci-app-openclash
+
+# python ssr
+mkdir luci-app-ssrserver-python
+cp -rf ../../kiddin9/luci-app-ssrserver-python/* luci-app-ssrserver-python
 
 #Diskman
 mkdir luci-app-diskman
@@ -83,6 +97,11 @@ mkdir luci-app-adguardhome
 mkdir adguardhome
 cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
 cp -rf ../../kiddin9/adguardhome/* adguardhome
+# 广告屏蔽大师 Plus+
+mkdir luci-app-adbyby-plus
+mkdir adbyby
+cp -rf ../../kiddin9/luci-app-adbyby-plus/* luci-app-adbyby-plus
+cp -rf ../../kiddin9/adbyby/* adbyby
 
 # 文件助手
 mkdir filebrowser
@@ -112,31 +131,15 @@ cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 mkdir luci-app-poweroffdevice
 cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 
-# 流量图形
-mkdir luci-app-vnstat
-cp -rf ../../kiddin9/luci-app-vnstat/* luci-app-vnstat
-
 # UPNP
 mkdir luci-app-upnp
 cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 
-# 证书ssl
-# mkdir luci-app-acme
-# cp -rf ../../kiddin9/luci-app-acme/* luci-app-acme
-
-# 自动格式化分区、扩容、自动挂载
-# mkdir luci-app-partexp
-# cp -rf ../../kiddin9/luci-app-partexp/* luci-app-partexp
-
-# 在线用户
-mkdir luci-app-onliner
-cp -rf ../../kiddin9/luci-app-onliner/* luci-app-onliner
-
 # 监控CPU性能
 mkdir netdata
 mkdir luci-app-netdata
-cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
-cp -rf ../../kiddin9/netdata/* netdata
+cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
+cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
 # 网络共享（Samba4）
@@ -149,16 +152,10 @@ mkdir aria2
 cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
 cp -rf ../../kiddin9/aria2/* aria2
 
-# 内网穿透
-# mkdir luci-app-frpc
-# mkdir luci-app-frps
-# cp -rf ../../kiddin9/luci-app-frpc/* luci-app-frpc
-# cp -rf ../../kiddin9/luci-app-frps/* luci-app-frps
-
-# 重启计划
-mkdir luci-app-autoreboot
-cp -rf ../../kiddin9/luci-app-autoreboot/* luci-app-autoreboot
-
+#定时任务
+mkdir luci-app-autotimeset
+cp -rf ../../kiddin9/luci-app-autotimeset/* luci-app-autotimeset
+sed -i 's,"control","system",g' luci-app-autotimeset/luasrc/controller/autotimeset.lua
 #IP/MAC绑定
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
@@ -167,168 +164,22 @@ cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 mkdir luci-app-parentcontrol
 cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
-#直播
-# mkdir luci-app-nginx-pingos
-# cp -rf ../../kiddin9/luci-app-nginx-pingos/* luci-app-nginx-pingos
+# 测速
+mkdir homebox
+mkdir luci-app-netspeedtest
+cp -rf ../../kiddin9/homebox/* homebox
+cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
+
+#docker
+mkdir luci-app-docker
+cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
+mkdir luci-app-zerotier
+cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
+#实时流量监控
+mkdir wrtbwmon
+mkdir luci-app-wrtbwmon
+cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
+cp -rf ../../kiddin9/luci-app-wrtbwmon/* luci-app-wrtbwmon
+
 
 popd
-
-# .config 添加自定义软件包
-echo "
-
-# 固件大小
-CONFIG_VMDK_IMAGES=y
-CONFIG_VHDX_IMAGES=y
-# CONFIG_GRUB_EFI_IMAGES is not set
-# CONFIG_TARGET_ROOTFS_EXT4FS is not set
-CONFIG_TARGET_x86=y
-CONFIG_TARGET_x86_64=y
-CONFIG_TARGET_x86_64_Generic=y
-CONFIG_TARGET_IMAGES_GZIP=y
-CONFIG_TARGET_ROOTFS_TARGZ=y
-CONFIG_TARGET_ROOTFS_PARTSIZE=1024
-CONFIG_LUCI_LANG_zh_Hans=y
-# CONFIG_PACKAGE_dnsmasq is not set
-CONFIG_PACKAGE_iptables-nft=y
-CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
-CONFIG_PACKAGE_iptables-mod-iprange=y
-CONFIG_PACKAGE_iptables-mod-nat-extra=y
-CONFIG_PACKAGE_iptables-mod-socket=y
-CONFIG_PACKAGE_iptables-mod-tproxy=y
-CONFIG_PACKAGE_luci-mod-admin-full=y
-CONFIG_PACKAGE_luci-app-opkg=y
-CONFIG_PACKAGE_luci-app-firewall=y
-CONFIG_PACKAGE_luci-mod-network=y
-CONFIG_PACKAGE_luci-mod-rpc=y
-CONFIG_PACKAGE_luci-mod-status=y
-CONFIG_PACKAGE_luci-mod-system=y
-CONFIG_PACKAGE_luci-theme-bootstrap=y
-CONFIG_PACKAGE_luci-app-uhttpd=y
-CONFIG_PACKAGE_dnsmasq_full=y
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_luci-proto-ipv6=y
-CONFIG_PACKAGE_qrencode=y
-CONFIG_PACKAGE_libqrencode=y
-CONFIG_PACKAGE_block-mount=y          
-CONFIG_PACKAGE_docker=y
-CONFIG_PACKAGE_dockerd=y
-CONFIG_PACKAGE_luci-app-docker=y
-CONFIG_PACKAGE_luci-lib-docker=y
-CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_luci-lib-jsonc=y
-CONFIG_PACKAGE_docker-compose=y
-CONFIG_DOCKER_CGROUP_OPTIONS=y
-CONFIG_PACKAGE_docker-compose=y
-CONFIG_PACKAGE_containerd=y
-CONFIG_PACKAGE_runc=y
-CONFIG_DOCKER_NET_MACVLAN=y
-CONFIG_PACKAGE_libnetwork=y
-CONFIG_DOCKER_OPTIONAL_FEATURES=y
-CONFIG_PACKAGE_tini=y
-CONFIG_PACKAGE_ffmpeg=y
-
-#ssh连接
-CONFIG_PACKAGE_openssh-sftp-server=y
-
-# cloudflare隧道
-CONFIG_PACKAGE_cloudflared=y
-
-# passwall
-CONFIG_PACKAGE_luci-app-passwall=y
-
-# ssr
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-
-# DiskMan 磁盘管理
-CONFIG_PACKAGE_blkid=y
-CONFIG_PACKAGE_fdisk=y          
-CONFIG_PACKAGE_luci-app-diskman=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
-
-# 在线用户
-CONFIG_PACKAGE_luci-app-onliner=y
-
-# 文件助手
-CONFIG_PACKAGE_luci-lib-fs=y
-CONFIG_PACKAGE_luci-app-fileassistant=y
-CONFIG_PACKAGE_filebrowser=y
-CONFIG_PACKAGE_luci-app-filebrowser=y
-# CONFIG_PACKAGE_luci-app-filetransfer=y
-
-# 去广告
-CONFIG_PACKAGE_luci-app-adguardhome=y
-
-# VPN服务器
-# CONFIG_PACKAGE_luci-app-brook-server=y
-# CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
-# CONFIG_PACKAGE_luci-app-trojan-server=y
-CONFIG_PACKAGE_luci-app-openvpn=y
-CONFIG_PACKAGE_luci-app-openvpn-server=y
-CONFIG_PACKAGE_luci-app-pptp-server=y
-# CONFIG_PACKAGE_luci-app-softethervpn=y
-
-# wireguard
-CONFIG_PACKAGE_luci-app-wireguard=y
-CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
-CONFIG_PACKAGE_luci-proto-wireguard=y
-CONFIG_PACKAGE_wireguard=y
-CONFIG_PACKAGE_wireguard-tools=y
-CONFIG_PACKAGE_kmod-wireguard=y
-
-# Windows激活
-CONFIG_PACKAGE_vlmcsd=y
-CONFIG_PACKAGE_luci-app-vlmcsd=y
-
-# 终端
-CONFIG_PACKAGE_luci-app-ttyd=y
-
-# 关机
-CONFIG_PACKAGE_luci-app-poweroffdevice=y
-
-# UPNP
-CONFIG_PACKAGE_luci-app-upnp=y
-
-# 网络带宽监视器
-CONFIG_PACKAGE_luci-app-nlbwmon=y
-CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
-
-# smartdns
-CONFIG_PACKAGE_luci-app-smartdns=y
-
-# 流量图形
-CONFIG_PACKAGE_libsqlite3=y
-CONFIG_PACKAGE_luci-app-vnstat2=y
-
-
-# 内网穿透
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-frps=y
-
-# 网络共享（Samba4）
-CONFIG_PACKAGE_luci-app-samba4=y
-
-# aria2下载工具
-CONFIG_PACKAGE_luci-app-aria2=y
-
-# 监控CPU性能
-CONFIG_PACKAGE_netdata=y
-CONFIG_PACKAGE_luci-app-netdata=y
-
-# 重启计划-
-CONFIG_PACKAGE_luci-app-autoreboot=y
-
-#IP/MAC绑定
-CONFIG_PACKAGE_luci-app-arpbind=y
-
-#家长控制 https://github.com/sirpdboy/
-CONFIG_PACKAGE_luci-app-parentcontrol=y
-
-CONFIG_PACKAGE_luci-app-watchcat=y
-CONFIG_PACKAGE_luci-app-natmap=y
-
-" >> .config

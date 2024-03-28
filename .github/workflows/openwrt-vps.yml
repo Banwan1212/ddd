@@ -6,7 +6,7 @@
 # Copyright (C) 2020 KFERMercer
 #
 
-name: OpenWrt-vps
+name: openwrt_dhcp_zip
 
 on:
   #schedule:
@@ -37,8 +37,8 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Lean--p.info
   Firmware_Name: OpenWrt-CI-test
-  DIY_P1_SH: smpackage/test-1-p.sh  
-  DIY_P2_SH: smpackage/vps.sh
+  DIY_P1_SH: smpackage/test-1-p.sh
+  DIY_P2_SH: smpackage/openwrt_dhcp.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -51,7 +51,7 @@ jobs:
   build:
 
 
-    name: Build OpenWrt vps
+    name: Build openwrt_dhcp_zip
 
     runs-on: ubuntu-latest
     
@@ -134,13 +134,166 @@ jobs:
         run: cd openwrt && ./scripts/feeds install -a
 
 
-      - name: patch2补丁和自定义设置.config
+      - name: patch2补丁
         run: |
           [ -e files ] && mv files openwrt/files
           [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
           chmod +x $DIY_P2_SH
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P2_SH
+      - name: 自定义设置.config
+        run: |
+          cd openwrt
+          
+          rm -f ./.config*
+          rm -rf ./tmp && rm -rf .config
+          touch ./.config          
+          cat >> .config <<EOF 
+          CONFIG_VMDK_IMAGES=y
+          CONFIG_VHDX_IMAGES=y
+          # CONFIG_GRUB_EFI_IMAGES is not set
+          # CONFIG_TARGET_ROOTFS_EXT4FS is not set
+          CONFIG_TARGET_x86=y
+          CONFIG_TARGET_x86_64=y
+          CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_IMAGES_GZIP=y
+          CONFIG_TARGET_ROOTFS_TARGZ=y
+          CONFIG_TARGET_ROOTFS_PARTSIZE=1024
+          
+                    
+         
+          # CONFIG_PACKAGE_dnsmasq is not set
+          CONFIG_LUCI_LANG_zh_Hans=y
+          CONFIG_PACKAGE_luci-mod-admin-full=y
+          CONFIG_PACKAGE_luci-app-opkg=y
+          CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
+          CONFIG_PACKAGE_luci-app-firewall=y
+          CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+          CONFIG_PACKAGE_luci-mod-network=y
+          CONFIG_PACKAGE_luci-mod-rpc=y
+          CONFIG_PACKAGE_luci-mod-status=y
+          CONFIG_PACKAGE_luci-mod-system=y
+          CONFIG_PACKAGE_luci-theme-bootstrap=y
+          CONFIG_PACKAGE_luci-app-uhttpd=y
+          CONFIG_PACKAGE_dnsmasq_full=y
+          CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+          CONFIG_PACKAGE_ipv6helper=y
+          CONFIG_PACKAGE_luci-proto-ipv6=y
+          CONFIG_PACKAGE_qrencode=y
+          CONFIG_PACKAGE_libqrencode=y
+          CONFIG_PACKAGE_block-mount=y
+          CONFIG_PACKAGE_cloudflared=y
+                    
+          CONFIG_PACKAGE_luci-lib-jsonc=y
+          
+          CONFIG_DOCKER_CGROUP_OPTIONS=y
+          
+          CONFIG_PACKAGE_containerd=y
+          CONFIG_PACKAGE_runc=y
+          CONFIG_DOCKER_NET_MACVLAN=y
+          CONFIG_PACKAGE_libnetwork=y
+          CONFIG_DOCKER_OPTIONAL_FEATURES=y
+          CONFIG_PACKAGE_tini=y
+          
+          # 文件助手
+          CONFIG_PACKAGE_luci-app-fileassistant=y
+          CONFIG_PACKAGE_filebrowser=y
+          CONFIG_PACKAGE_luci-app-filebrowser=y
+          CONFIG_PACKAGE_luci-app-filetransfer=y
+          # 证书ssl
+          CONFIG_PACKAGE_luci-app-acme=y
+          # 流量图形
+          CONFIG_PACKAGE_luci-app-vnstat=y
+          # UPNP
+          CONFIG_PACKAGE_luci-app-upnp=y
+          # 网络带宽监视器
+          CONFIG_PACKAGE_luci-app-nlbwmon=y
+          CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+          # smartdns
+          CONFIG_PACKAGE_luci-app-smartdns=y
+          # 终端
+          CONFIG_PACKAGE_luci-app-ttyd=y
+          # ssr
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
+          
+          
+          # python ssr
+          CONFIG_PACKAGE_luci-app-ssrserver-python=y
+          
+          # passwall
+          CONFIG_PACKAGE_luci-app-passwall2=y
+          CONFIG_PACKAGE_luci-app-passwall=y
+         
+          CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-openvpn=y
+          CONFIG_PACKAGE_luci-app-openvpn-server=y
+          # 内网穿透
+          CONFIG_PACKAGE_luci-app-frpc=y
+          CONFIG_PACKAGE_luci-app-frps=y
+          #ssh连接
+          CONFIG_PACKAGE_openssh-sftp-server=y
+          # Turbo ACC 加速插件
+          # CONFIG_PACKAGE_luci-app-turboacc=y
+          # 广告屏蔽大师 Plus+
+          CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          CONFIG_PACKAGE_adbyby=y
+          CONFIG_PACKAGE_luci-app-adguardhome=y
+          CONFIG_PACKAGE_adguardhome=y
+          # vpn
+          CONFIG_PACKAGE_luci-app-pptp-server=y
+          CONFIG_PACKAGE_luci-app-pppoe-server=y
+          # DiskMan 磁盘管理
+          CONFIG_PACKAGE_blkid=y
+          CONFIG_PACKAGE_fdisk=y
+          CONFIG_PACKAGE_lsblk=y
+          CONFIG_PACKAGE_luci-app-diskman=y
+          CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y          
+          CONFIG_PACKAGE_smartmontools=y
+          # Windows激活
+          CONFIG_PACKAGE_vlmcsd=y
+          CONFIG_PACKAGE_luci-app-vlmcsd=y
+          # wireguard
+          CONFIG_PACKAGE_luci-app-wireguard=y
+          CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
+          CONFIG_PACKAGE_luci-proto-wireguard=y
+          CONFIG_PACKAGE_wireguard=y
+          CONFIG_PACKAGE_wireguard-tools=y
+          CONFIG_PACKAGE_kmod-wireguard=y
+          # aria2下载工具
+          CONFIG_PACKAGE_luci-app-aria2=y
+          # 网络共享（Samba4）
+          CONFIG_PACKAGE_luci-app-samba4=y
+          # 监控CPU性能
+          CONFIG_PACKAGE_netdata=y
+          CONFIG_PACKAGE_luci-app-netdata=y
+          # 测速
+          CONFIG_PACKAGE_luci-app-netspeedtest=y
+          CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
+          #
+          CONFIG_PACKAGE_luci-app-zerotier=y
+          #视频解码
+          CONFIG_PACKAGE_ffmpeg=y
+          #重启管理
+          CONFIG_PACKAGE_luci-app-watchcat=y
+          #端口开方
+          CONFIG_PACKAGE_luci-app-natmap=y
+          #IP/MAC绑定
+          CONFIG_PACKAGE_luci-app-arpbind=y
+          #定时任务
+          CONFIG_PACKAGE_luci-app-autotimeset=y
+          #关机
+          CONFIG_PACKAGE_luci-app-poweroffdevice=y
+          #实时流量
+          CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_wrtbwmon=y
+          
+          EOF
+          #
+          # ===============================================================
+          # 
+          sed -i 's/^[ \t]*//g' ./.config
+          make defconfig
+          
       - name: SSH connection to Actions
         uses: P3TERX/ssh2actions@v1.0.0
         if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')

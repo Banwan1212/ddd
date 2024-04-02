@@ -177,8 +177,6 @@ popd
 echo "
 
 # 固件大小
-# CONFIG_VMDK_IMAGES is not set
-# CONFIG_VHDX_IMAGES is not set
 # CONFIG_GRUB_EFI_IMAGES is not set
 # CONFIG_TARGET_ROOTFS_EXT4FS is not set
 CONFIG_TARGET_x86=y
@@ -187,17 +185,16 @@ CONFIG_TARGET_x86_64_Generic=y
 CONFIG_TARGET_IMAGES_GZIP=y
 CONFIG_TARGET_ROOTFS_TARGZ=y
 CONFIG_TARGET_ROOTFS_PARTSIZE=1024
-CONFIG_LUCI_LANG_zh_Hans=y
+          
+                    
+         
 # CONFIG_PACKAGE_dnsmasq is not set
-CONFIG_PACKAGE_iptables-nft=y
-CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
-CONFIG_PACKAGE_iptables-mod-iprange=y
-CONFIG_PACKAGE_iptables-mod-nat-extra=y
-CONFIG_PACKAGE_iptables-mod-socket=y
-CONFIG_PACKAGE_iptables-mod-tproxy=y
+CONFIG_LUCI_LANG_zh_Hans=y
 CONFIG_PACKAGE_luci-mod-admin-full=y
 CONFIG_PACKAGE_luci-app-opkg=y
+CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
 CONFIG_PACKAGE_luci-app-firewall=y
+CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
 CONFIG_PACKAGE_luci-mod-network=y
 CONFIG_PACKAGE_luci-mod-rpc=y
 CONFIG_PACKAGE_luci-mod-status=y
@@ -210,64 +207,72 @@ CONFIG_PACKAGE_ipv6helper=y
 CONFIG_PACKAGE_luci-proto-ipv6=y
 CONFIG_PACKAGE_qrencode=y
 CONFIG_PACKAGE_libqrencode=y
-CONFIG_PACKAGE_block-mount=y          
-
+CONFIG_PACKAGE_block-mount=y
+CONFIG_PACKAGE_cloudflared=y
+          
 CONFIG_PACKAGE_luci-lib-jsonc=y
-
 CONFIG_DOCKER_CGROUP_OPTIONS=y
-
 CONFIG_PACKAGE_containerd=y
 CONFIG_PACKAGE_runc=y
 CONFIG_DOCKER_NET_MACVLAN=y
 CONFIG_PACKAGE_libnetwork=y
 CONFIG_DOCKER_OPTIONAL_FEATURES=y
 CONFIG_PACKAGE_tini=y
-CONFIG_PACKAGE_ffmpeg=y
-
-#ssh连接
-CONFIG_PACKAGE_openssh-sftp-server=y
-
-# cloudflare隧道
-CONFIG_PACKAGE_cloudflared=y
-
-# passwall
-CONFIG_PACKAGE_luci-app-passwall=y
-
-# ssr
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-
-# DiskMan 磁盘管理
-CONFIG_PACKAGE_blkid=y
-CONFIG_PACKAGE_fdisk=y          
-CONFIG_PACKAGE_luci-app-diskman=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456=y
-CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
-
-# 在线用户
-CONFIG_PACKAGE_luci-app-onliner=y
-
+          
 # 文件助手
-CONFIG_PACKAGE_luci-lib-fs=y
 CONFIG_PACKAGE_luci-app-fileassistant=y
 CONFIG_PACKAGE_filebrowser=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
-# CONFIG_PACKAGE_luci-app-filetransfer=y
+CONFIG_PACKAGE_luci-app-filetransfer=y
 
-# 去广告
-CONFIG_PACKAGE_luci-app-adguardhome=y
-
-# VPN服务器
-# CONFIG_PACKAGE_luci-app-brook-server=y
-# CONFIG_PACKAGE_luci-app-ssr-mudb-server=y
-# CONFIG_PACKAGE_luci-app-trojan-server=y
+# UPNP
+CONFIG_PACKAGE_luci-app-upnp=y
+# 网络带宽监视器
+CONFIG_PACKAGE_luci-app-nlbwmon=y
+CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
+# smartdns
+CONFIG_PACKAGE_luci-app-smartdns=y
+# 终端
+CONFIG_PACKAGE_luci-app-ttyd=y
+# ssr
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+          
+          
+# python ssr
+CONFIG_PACKAGE_luci-app-ssrserver-python=y
+          
+# passwall
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall=y
+         
+CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
+# 内网穿透
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-frps=y
+#ssh连接
+CONFIG_PACKAGE_openssh-sftp-server=y
+# Turbo ACC 加速插件
+# CONFIG_PACKAGE_luci-app-turboacc=y
+# 广告屏蔽大师 Plus+
+CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_adbyby=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_adguardhome=y
+# vpn
 CONFIG_PACKAGE_luci-app-pptp-server=y
-# CONFIG_PACKAGE_luci-app-softethervpn=y
-
+CONFIG_PACKAGE_luci-app-pppoe-server=y
+# DiskMan 磁盘管理
+CONFIG_PACKAGE_blkid=y
+CONFIG_PACKAGE_fdisk=y
+CONFIG_PACKAGE_lsblk=y
+CONFIG_PACKAGE_luci-app-diskman=y
+CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y          
+CONFIG_PACKAGE_smartmontools=y
+# Windows激活
+CONFIG_PACKAGE_vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=y
 # wireguard
 CONFIG_PACKAGE_luci-app-wireguard=y
 CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
@@ -275,69 +280,31 @@ CONFIG_PACKAGE_luci-proto-wireguard=y
 CONFIG_PACKAGE_wireguard=y
 CONFIG_PACKAGE_wireguard-tools=y
 CONFIG_PACKAGE_kmod-wireguard=y
-
-# Windows激活
-CONFIG_PACKAGE_vlmcsd=y
-CONFIG_PACKAGE_luci-app-vlmcsd=y
-
-# 终端
-CONFIG_PACKAGE_luci-app-ttyd=y
-
-# 关机
-CONFIG_PACKAGE_luci-app-poweroffdevice=y
-
-# 流量图形
-CONFIG_PACKAGE_luci-app-vnstat=y
-
-# UPNP
-CONFIG_PACKAGE_luci-app-upnp=y
-
-# 网络带宽监视器
-CONFIG_PACKAGE_luci-app-nlbwmon=y
-CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
-
-# smartdns
-CONFIG_PACKAGE_luci-app-smartdns=y
-
-# 证书ssl
-# CONFIG_PACKAGE_luci-app-acme=y
-# CONFIG_PACKAGE_acme=y
-# CONFIG_PACKAGE_acme-acmesh-dnsapi=y
-# CONFIG_PACKAGE_socat=y
-
-# 流量图形
-CONFIG_PACKAGE_luci-app-vnstat=y
-
-# 内网穿透
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-frps=y
-
-# 网络共享（Samba4）
-CONFIG_PACKAGE_luci-app-samba4=y
-
 # aria2下载工具
 CONFIG_PACKAGE_luci-app-aria2=y
-
+# 网络共享（Samba4）
+CONFIG_PACKAGE_luci-app-samba4=y
 # 监控CPU性能
 CONFIG_PACKAGE_netdata=y
 CONFIG_PACKAGE_luci-app-netdata=y
-
-# 重启计划-
-CONFIG_PACKAGE_luci-app-autoreboot=y
-
+# 测速
+CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_luci-i18n-netspeedtest-zh-cn=y
+#
+CONFIG_PACKAGE_luci-app-zerotier=y
+#视频解码
+CONFIG_PACKAGE_ffmpeg=y
+#重启管理
+CONFIG_PACKAGE_luci-app-watchcat=y
+#端口开方
+CONFIG_PACKAGE_luci-app-natmap=y
 #IP/MAC绑定
 CONFIG_PACKAGE_luci-app-arpbind=y
-
-#家长控制 https://github.com/sirpdboy/
-CONFIG_PACKAGE_luci-app-parentcontrol=y
-
-#网络设置向导 一键设置IPV4/IPV6 旁路由
-CONFIG_PACKAGE_luci-app-wizard=y
-
-#直播
-# CONFIG_PACKAGE_luci-nginx=y
-# CONFIG_PACKAGE_luci-ssl-nginx=y
-# CONFIG_PACKAGE_luci-ssl-openssl=y
-# CONFIG_PACKAGE_luci-app-nginx-pingos=y
-
+#定时任务
+CONFIG_PACKAGE_luci-app-autotimeset=y
+#关机
+CONFIG_PACKAGE_luci-app-poweroffdevice=y
+#实时流量
+CONFIG_PACKAGE_luci-app-wrtbwmon=y
+CONFIG_PACKAGE_wrtbwmon=y
 " >> .config

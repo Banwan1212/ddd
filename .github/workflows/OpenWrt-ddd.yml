@@ -205,10 +205,7 @@ jobs:
           CONFIG_PACKAGE_filebrowser=y
           CONFIG_PACKAGE_luci-app-filebrowser=y
           CONFIG_PACKAGE_luci-app-filetransfer=y
-          # 证书ssl
-          CONFIG_PACKAGE_luci-app-acme=y
-          # 流量图形
-          CONFIG_PACKAGE_luci-app-vnstat=y
+
           # UPNP
           CONFIG_PACKAGE_luci-app-upnp=y
           # 网络带宽监视器

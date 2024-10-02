@@ -173,6 +173,9 @@ jobs:
           CONFIG_PACKAGE_luci-mod-rpc=y
           CONFIG_PACKAGE_luci-mod-status=y
           CONFIG_PACKAGE_luci-mod-system=y
+          CONFIG_PACKAGE_iptables-mod-socket=y
+          CONFIG_PACKAGE_iptables-mod-iprange=y
+          CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
           CONFIG_PACKAGE_dnsmasq_full=y

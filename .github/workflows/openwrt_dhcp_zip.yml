@@ -218,16 +218,16 @@ jobs:
           CONFIG_PACKAGE_luci-app-smartdns=y
           # 终端
           CONFIG_PACKAGE_luci-app-ttyd=y
+          
           # ssr
           # CONFIG_PACKAGE_luci-app-ssr-plus=y
-          
-          
+                    
           # python ssr
           CONFIG_PACKAGE_luci-app-ssrserver-python=y
           
           # passwall
           CONFIG_PACKAGE_luci-app-passwall2=y
-          # CONFIG_PACKAGE_luci-app-passwall=y
+          CONFIG_PACKAGE_luci-app-passwall=y
          
           CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-openvpn=y

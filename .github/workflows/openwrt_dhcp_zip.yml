@@ -219,7 +219,7 @@ jobs:
           # 终端
           CONFIG_PACKAGE_luci-app-ttyd=y
           # ssr
-          CONFIG_PACKAGE_luci-app-ssr-plus=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus=y
           
           
           # python ssr

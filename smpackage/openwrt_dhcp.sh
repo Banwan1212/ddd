@@ -74,10 +74,10 @@ mkdir package/community
 pushd package/community
 
 # helloworld
-mkdir helloworld
-pushd helloworld
-git clone --depth=1 https://github.com/fw876/helloworld .
-popd
+# mkdir helloworld
+# pushd helloworld
+# git clone --depth=1 https://github.com/fw876/helloworld .
+# popd
 
 # passwall
 mkdir passwall

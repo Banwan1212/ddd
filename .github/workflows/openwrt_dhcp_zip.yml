@@ -226,7 +226,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssrserver-python=y
           
           # passwall
-          # CONFIG_PACKAGE_luci-app-passwall2=y
+          CONFIG_PACKAGE_luci-app-passwall2=y
           # CONFIG_PACKAGE_luci-app-passwall=y
          
           CONFIG_PACKAGE_luci-app-openclash=y

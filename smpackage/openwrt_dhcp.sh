@@ -69,6 +69,10 @@ pushd N-wrt
 git clone --depth=1 https://github.com/N-wrt/openwrt-ext .
 popd
 
+mkdir helloworld
+pushd helloworld
+git clone --depth=1 https://github.com/fw876/helloworld .
+popd
 
 mkdir package/community
 pushd package/community
@@ -79,6 +83,8 @@ pushd passwall
 git clone --depth=1 https://github.com/kenzok8/small .
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 rm -rf v2ray-plugin
+mkdir v2ray-plugin
+cp -rf ../../helloworld/v2ray-plugin/* v2ray-plugin
 popd
 #-------------------------
 # openclash

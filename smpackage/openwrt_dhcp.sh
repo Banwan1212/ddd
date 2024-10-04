@@ -78,6 +78,7 @@ mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/kenzok8/small .
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
+rm -rf v2ray-plugin
 popd
 #-------------------------
 # openclash

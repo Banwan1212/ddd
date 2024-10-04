@@ -85,10 +85,6 @@ rm -rf v2ray-plugin
 popd
 
 #-------------------------
-mkdir v2ray-plugin
-cp -rf ../../helloworld/v2ray-plugin/* v2ray-plugin
-
-#-------------------------
 # openclash
 mkdir luci-app-openclash
 cp -rf ../../kiddin9/luci-app-openclash/* luci-app-openclash

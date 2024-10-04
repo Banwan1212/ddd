@@ -76,7 +76,8 @@ pushd package/community
 # passwall
 mkdir passwall
 pushd passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
+git clone --depth=1 https://github.com/kenzok8/small .
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 popd
 #-------------------------
 # openclash

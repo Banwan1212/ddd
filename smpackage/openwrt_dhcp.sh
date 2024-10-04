@@ -81,11 +81,13 @@ pushd package/community
 mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/kenzok8/small .
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
 rm -rf v2ray-plugin
-mkdir v2ray-plugin
-cp -rf ../../../helloworld/v2ray-plugin/* v2ray-plugin
 popd
+
+#-------------------------
+mkdir v2ray-plugin
+cp -rf ../../helloworld/v2ray-plugin/* v2ray-plugin
+
 #-------------------------
 # openclash
 mkdir luci-app-openclash

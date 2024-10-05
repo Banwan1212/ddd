@@ -105,33 +105,30 @@ cp -rf ../../kenzok8/adguardhome/* adguardhome
 mkdir filebrowser
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
-mkdir luci-app-filetransfer
-mkdir luci-lib-fs
-cp -rf ../../ddd/filebrowser/* filebrowser
-cp -rf ../../ddd/luci-app-filebrowser/* luci-app-filebrowser
-cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
-cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
-cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
+
+cp -rf ../../kenzok8/filebrowser/* filebrowser
+cp -rf ../../kenzok8/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 
 # Windows激活KMS激活服务器
-mkdir vlmcsd
-mkdir luci-app-vlmcsd
-cp -rf ../../kiddin9/vlmcsd/* vlmcsd
-cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
+# mkdir vlmcsd
+# mkdir luci-app-vlmcsd
+# cp -rf ../../kiddin9/vlmcsd/* vlmcsd
+# cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 
 # 关机
-mkdir luci-app-poweroffdevice
-cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
+# mkdir luci-app-poweroffdevice
+# cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 
 # UPNP
-mkdir luci-app-upnp
-cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
+# mkdir luci-app-upnp
+# cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 
 # 监控CPU性能
-mkdir netdata
-mkdir luci-app-netdata
-cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
-cp -rf ../../wandduse/netdata/* netdata
+# mkdir netdata
+# mkdir luci-app-netdata
+# cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
+# cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
 # 网络共享（Samba4）
@@ -152,26 +149,26 @@ cp -rf ../../ddd/luci-app-autotimeset/* luci-app-autotimeset
 mkdir luci-app-arpbind
 cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
 
-#家长控制 https://github.com/sirpdboy/
-mkdir luci-app-parentcontrol
-cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
+# 家长控制 https://github.com/sirpdboy/
+# mkdir luci-app-parentcontrol
+# cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
 
 # 测速
-mkdir homebox
-mkdir luci-app-netspeedtest
-cp -rf ../../kiddin9/homebox/* homebox
-cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
+# mkdir homebox
+# mkdir luci-app-netspeedtest
+# cp -rf ../../kiddin9/homebox/* homebox
+# cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
 
-#docker
-mkdir luci-app-docker
-cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
-mkdir luci-app-zerotier
-cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
+# docker
+# mkdir luci-app-docker
+# cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
+# mkdir luci-app-zerotier
+# cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
 #实时流量监控
-mkdir wrtbwmon
-mkdir luci-app-wrtbwmon
-cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
-cp -rf ../../ddd/luci-app-wrtbwmon/* luci-app-wrtbwmon
+# mkdir wrtbwmon
+# mkdir luci-app-wrtbwmon
+# cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
+# cp -rf ../../ddd/luci-app-wrtbwmon/* luci-app-wrtbwmon
 
 
 popd

@@ -49,19 +49,14 @@ sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-defaul
 
 # 添加第三方应用
 
-mkdir wandduse
-pushd wandduse
-git clone --depth=1 https://github.com/wandduse/openwrt-packages .
+mkdir kenzok8
+pushd kenzok8
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages .
 popd
 
 mkdir kiddin9
 pushd kiddin9
 git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
-popd
-
-mkdir ddd
-pushd ddd
-git clone --depth=1 https://github.com/Banwan1212/openwrt-packages .
 popd
 
 mkdir N-wrt
@@ -95,7 +90,9 @@ cp -rf ../../kiddin9/luci-app-ssrserver-python/* luci-app-ssrserver-python
 
 #Diskman
 mkdir luci-app-diskman
-cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
+pushd luci-app-diskman
+git clone --depth=1 https://github.com/lisaac/luci-app-diskman/tree/master/applications/luci-app-diskman .
+popd
 
 # 去广告
 #ADGuardHome（kiddin9）

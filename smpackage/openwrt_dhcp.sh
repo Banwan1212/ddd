@@ -67,6 +67,7 @@ popd
 mkdir Banwan1212
 pushd Banwan1212
 git clone --depth=1 https://github.com/Banwan1212/openwrt-filebrowser .
+git clone --depth=1 https://github.com/lisaac/luci-app-diskman/tree/master/applications .
 popd
 
 mkdir package/community
@@ -79,20 +80,9 @@ git clone --depth=1 https://github.com/kenzok8/small .
 rm -rf v2ray-plugin
 popd
 
-#-------------------------
-# openclash
-# mkdir luci-app-openclash
-# cp -rf ../../kiddin9/luci-app-openclash/* luci-app-openclash
-
-# python ssr
-# mkdir luci-app-ssrserver-python
-# cp -rf ../../kiddin9/luci-app-ssrserver-python/* luci-app-ssrserver-python
-
 #Diskman
 mkdir luci-app-diskman
-pushd luci-app-diskman
-git clone --depth=1 https://github.com/lisaac/luci-app-diskman/tree/master/applications/luci-app-diskman .
-popd
+cp -rf ../../Banwan1212/luci-app-diskman/* luci-app-diskman
 
 # 去广告
 #ADGuardHome
@@ -120,9 +110,6 @@ cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 # mkdir luci-app-poweroffdevice
 # cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 
-# UPNP
-# mkdir luci-app-upnp
-# cp -rf ../../kiddin9/luci-app-upnp/* luci-app-upnp
 
 # 监控CPU性能
 # mkdir netdata
@@ -130,45 +117,6 @@ cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 # cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
 # cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
-
-# 网络共享（Samba4）
-mkdir luci-app-samba4
-cp -rf ../../kiddin9/luci-app-samba4/* luci-app-samba4
-
-# aria2下载工具
-mkdir luci-app-aria2
-mkdir aria2
-cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
-cp -rf ../../kiddin9/aria2/* aria2
-
-#定时任务
-mkdir luci-app-autotimeset
-cp -rf ../../ddd/luci-app-autotimeset/* luci-app-autotimeset
-
-#IP/MAC绑定
-mkdir luci-app-arpbind
-cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
-
-# 家长控制 https://github.com/sirpdboy/
-# mkdir luci-app-parentcontrol
-# cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
-
-# 测速
-# mkdir homebox
-# mkdir luci-app-netspeedtest
-# cp -rf ../../kiddin9/homebox/* homebox
-# cp -rf ../../kiddin9/luci-app-netspeedtest/* luci-app-netspeedtest
-
-# docker
-# mkdir luci-app-docker
-# cp -rf ../../kiddin9/luci-app-docker/* luci-app-docker
-# mkdir luci-app-zerotier
-# cp -rf ../../kiddin9/luci-app-zerotier/* luci-app-zerotier
-#实时流量监控
-# mkdir wrtbwmon
-# mkdir luci-app-wrtbwmon
-# cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
-# cp -rf ../../ddd/luci-app-wrtbwmon/* luci-app-wrtbwmon
 
 
 popd

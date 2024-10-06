@@ -102,22 +102,22 @@ cp -rf ../../Banwan1212/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 
 # Windows激活KMS激活服务器
-# mkdir vlmcsd
-# mkdir luci-app-vlmcsd
-# cp -rf ../../kiddin9/vlmcsd/* vlmcsd
-# cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
+mkdir vlmcsd
+mkdir luci-app-vlmcsd
+cp -rf ../../kiddin9/vlmcsd/* vlmcsd
+cp -rf ../../kiddin9/luci-app-vlmcsd/* luci-app-vlmcsd
 
 # 关机
-# mkdir luci-app-poweroffdevice
-# cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
+mkdir luci-app-poweroffdevice
+cp -rf ../../kiddin9/luci-app-poweroffdevice/* luci-app-poweroffdevice
 
 
 # 监控CPU性能
-# mkdir netdata
-# mkdir luci-app-netdata
-# cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
-# cp -rf ../../wandduse/netdata/* netdata
-# git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
+mkdir netdata
+mkdir luci-app-netdata
+cp -rf ../../kiddin9/luci-app-netdata/* luci-app-netdata
+cp -rf ../../kiddin9/netdata/* netdata
+
 
 
 popd

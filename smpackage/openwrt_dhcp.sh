@@ -105,7 +105,7 @@ cp -rf ../../kenzok8/adguardhome/* adguardhome
 mkdir filebrowser
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
-
+# sed -i 's/需要授权/openwrt-23.05 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
 cp -rf ../../Banwan1212/filebrowser/* filebrowser
 cp -rf ../../Banwan1212/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant

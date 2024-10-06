@@ -102,11 +102,11 @@ cp -rf ../../kenzok8/luci-app-adguardhome/* luci-app-adguardhome
 cp -rf ../../kenzok8/adguardhome/* adguardhome
 
 # 文件助手
-# mkdir filebrowser
+mkdir filebrowser
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 
-# cp -rf ../../kenzok8/filebrowser/* filebrowser
+cp -rf ../../Banwan1212/filebrowser/* filebrowser
 cp -rf ../../Banwan1212/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 

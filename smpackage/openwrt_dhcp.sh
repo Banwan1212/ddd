@@ -64,9 +64,9 @@ pushd N-wrt
 git clone --depth=1 https://github.com/N-wrt/openwrt-ext .
 popd
 
-mkdir helloworld
-pushd helloworld
-git clone --depth=1 https://github.com/fw876/helloworld .
+mkdir Banwan1212
+pushd Banwan1212
+git clone --depth=1 https://github.com/Banwan1212/openwrt-filebrowser .
 popd
 
 mkdir package/community
@@ -103,11 +103,11 @@ cp -rf ../../kenzok8/adguardhome/* adguardhome
 
 # 文件助手
 # mkdir filebrowser
-# mkdir luci-app-filebrowser
+mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 
 # cp -rf ../../kenzok8/filebrowser/* filebrowser
-# cp -rf ../../kenzok8/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../Banwan1212/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
 
 # Windows激活KMS激活服务器

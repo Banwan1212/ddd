@@ -83,7 +83,7 @@ popd
 
 #Diskman
 mkdir luci-app-diskman
-cp -rf ../../Banwan1212/luci-app-diskman/* luci-app-diskman
+cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 
 # 去广告
 #ADGuardHome
@@ -98,8 +98,8 @@ mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 mkdir luci-app-filetransfer
 mkdir luci-lib-fs
-cp -rf ../../ddd/filebrowser/* filebrowser
-cp -rf ../../ddd/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../kiddin9/filebrowser/* filebrowser
+cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs

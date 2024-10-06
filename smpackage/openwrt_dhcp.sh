@@ -96,10 +96,13 @@ cp -rf ../../kenzok8/adguardhome/* adguardhome
 mkdir filebrowser
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
-# sed -i 's/需要授权/openwrt-23.05 wanuse.com/g' feeds/luci/modules/luci-base/po/zh_Hans/base.po
-cp -rf ../../Banwan1212/filebrowser/* filebrowser
-cp -rf ../../Banwan1212/luci-app-filebrowser/* luci-app-filebrowser
-cp -rf ../../kenzok8/luci-app-fileassistant/* luci-app-fileassistant
+mkdir luci-app-filetransfer
+mkdir luci-lib-fs
+cp -rf ../../ddd/filebrowser/* filebrowser
+cp -rf ../../ddd/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
+cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
+cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
 
 # Windows激活KMS激活服务器
 mkdir vlmcsd

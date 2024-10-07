@@ -111,12 +111,14 @@ cp -rf ../../kiddin9/adbyby/* adbyby
 
 # 文件助手
 mkdir filebrowser
+mkdir luci-app-filebrowser-go
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
 mkdir luci-app-filetransfer
 mkdir luci-lib-fs
-cp -rf ../../ddd/filebrowser/* filebrowser
-cp -rf ../../ddd/luci-app-filebrowser/* luci-app-filebrowser
+cp -rf ../../kiddin9/luci-app-filebrowser-go/* luci-app-filebrowser-go
+cp -rf ../../kiddin9/filebrowser/* filebrowser
+cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs

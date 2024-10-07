@@ -103,6 +103,7 @@ jobs:
           # sudo go get golang.org/dl/go1.23.0
           # sudo go1.23.0 download
           go version
+          sudo go version
       - name: 下载源代码
         working-directory: /workdir
         run: |

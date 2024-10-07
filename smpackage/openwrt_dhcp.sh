@@ -103,7 +103,7 @@ cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
 cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
 cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
-
+# sed -i 's/2.31.2/2.27.0/g' filebrowser/Makefile
 # Windows激活KMS激活服务器
 mkdir vlmcsd
 mkdir luci-app-vlmcsd

@@ -100,11 +100,6 @@ jobs:
           sudo timedatectl set-timezone "$TZ"
           sudo mkdir -p /workdir
           sudo chown $USER:$GROUPS /workdir
-          # sudo go get golang.org/dl/go1.23.0
-          # sudo go1.23.0 download
-          go version
-          sudo go version
-
 
       - name: SSH connection to Actions
         uses: P3TERX/ssh2actions@v1.0.0

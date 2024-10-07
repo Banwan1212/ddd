@@ -56,7 +56,7 @@ popd
 
 mkdir kiddin9
 pushd kiddin9
-git clone --depth=1 https://github.com/kiddin9/openwrt-packages .
+git clone --depth=1 https://github.com/Banwan1212/kwrt-packages .
 popd
 
 mkdir ddd

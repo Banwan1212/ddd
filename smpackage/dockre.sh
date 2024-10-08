@@ -64,7 +64,7 @@ pushd package/community
 # helloworld
 mkdir helloworld
 pushd helloworld
-git clone --depth=1 https://github.com/fw876/helloworld .
+git clone --depth=1 https://github.com/Banwan1212/helloworld .
 popd
 
 # passwall

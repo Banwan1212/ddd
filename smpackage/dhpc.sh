@@ -74,15 +74,15 @@ mkdir package/community
 pushd package/community
 
 # helloworld
-mkdir helloworld
-pushd helloworld
-git clone --depth=1 https://github.com/Banwan1212/helloworld .
-popd
+# mkdir helloworld
+# pushd helloworld
+# git clone --depth=1 https://github.com/Banwan1212/helloworld .
+# popd
 
-# passwall
+# passwall和ssr 合集helloworld
 mkdir passwall
 pushd passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall .
+git clone --depth=1 https://github.com/Banwan1212/small .
 popd
 #-------------------------
 # openclash

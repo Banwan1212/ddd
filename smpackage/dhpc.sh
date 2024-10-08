@@ -139,10 +139,6 @@ cp -rf ../../wandduse/netdata/* netdata
 mkdir luci-app-autotimeset
 cp -rf ../../ddd/luci-app-autotimeset/* luci-app-autotimeset
 
-#IP/MAC绑定
-mkdir luci-app-turboacc
-cp -rf ../../kiddin9/luci-app-turboacc/* luci-app-turboacc
-
 # 测速
 mkdir homebox
 mkdir luci-app-netspeedtest

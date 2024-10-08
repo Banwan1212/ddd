@@ -98,31 +98,14 @@ cp -rf ../../kiddin9/luci-app-ssrserver-python/* luci-app-ssrserver-python
 mkdir luci-app-diskman
 cp -rf ../../kiddin9/luci-app-diskman/* luci-app-diskman
 
-# 去广告
-#ADGuardHome（kiddin9）
-mkdir luci-app-adguardhome
-mkdir adguardhome
-cp -rf ../../kiddin9/luci-app-adguardhome/* luci-app-adguardhome
-cp -rf ../../kiddin9/adguardhome/* adguardhome
-# 广告屏蔽大师 Plus+
-mkdir luci-app-adbyby-plus
-mkdir adbyby
-cp -rf ../../kiddin9/luci-app-adbyby-plus/* luci-app-adbyby-plus
-cp -rf ../../kiddin9/adbyby/* adbyby
-
 # 文件助手
 mkdir filebrowser
 mkdir luci-app-filebrowser-go
 mkdir luci-app-filebrowser
 mkdir luci-app-fileassistant
-mkdir luci-app-filetransfer
-mkdir luci-lib-fs
 cp -rf ../../kiddin9/luci-app-filebrowser-go/* luci-app-filebrowser-go
 cp -rf ../../kiddin9/filebrowser/* filebrowser
-cp -rf ../../kiddin9/luci-app-filebrowser/* luci-app-filebrowser
 cp -rf ../../kiddin9/luci-app-fileassistant/* luci-app-fileassistant
-cp -rf ../../kiddin9/luci-app-filetransfer/* luci-app-filetransfer
-cp -rf ../../kiddin9/luci-lib-fs/* luci-lib-fs
 
 # VPN服务器
 mkdir luci-app-pptp-server
@@ -151,27 +134,14 @@ cp -rf ../../wandduse/luci-app-netdata/* luci-app-netdata
 cp -rf ../../wandduse/netdata/* netdata
 # git clone https://github.com/sirpdboy/luci-app-netdata luci-app-netdata
 
-# 网络共享（Samba4）
-mkdir luci-app-samba4
-cp -rf ../../kiddin9/luci-app-samba4/* luci-app-samba4
-
-# aria2下载工具
-mkdir luci-app-aria2
-mkdir aria2
-cp -rf ../../kiddin9/luci-app-aria2/* luci-app-aria2
-cp -rf ../../kiddin9/aria2/* aria2
 
 #定时任务
 mkdir luci-app-autotimeset
 cp -rf ../../ddd/luci-app-autotimeset/* luci-app-autotimeset
 
 #IP/MAC绑定
-mkdir luci-app-arpbind
-cp -rf ../../kiddin9/luci-app-arpbind/* luci-app-arpbind
-
-#家长控制 https://github.com/sirpdboy/
-mkdir luci-app-parentcontrol
-cp -rf ../../kiddin9/luci-app-parentcontrol/* luci-app-parentcontrol
+mkdir luci-app-turboacc
+cp -rf ../../kiddin9/luci-app-turboacc/* luci-app-turboacc
 
 # 测速
 mkdir homebox

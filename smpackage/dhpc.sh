@@ -155,6 +155,5 @@ mkdir wrtbwmon
 mkdir luci-app-wrtbwmon
 cp -rf ../../kiddin9/wrtbwmon/* wrtbwmon
 cp -rf ../../ddd/luci-app-wrtbwmon/* luci-app-wrtbwmon
-
-
 popd
+curl -sSL https://raw.githubusercontent.com/chenmozhijin/turboacc/luci/add_turboacc.sh -o add_turboacc.sh && bash add_turboacc.sh

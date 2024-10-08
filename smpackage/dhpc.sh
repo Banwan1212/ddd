@@ -83,7 +83,7 @@ pushd package/community
 mkdir passwall
 pushd passwall
 git clone --depth=1 https://github.com/Banwan1212/small .
-rm -rf v2ray-plugin
+# rm -rf v2ray-plugin
 popd
 #-------------------------
 # openclash

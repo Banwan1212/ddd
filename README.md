@@ -18,3 +18,6 @@ make menuconfig \
 make package/openwrt-vlmcsd/compile V=99
 
 #汉化luci、modules/luci-base/po/zh_Hans/base.po
+
+自动编译资料
+https://github.com/aoxiyu/JGYU

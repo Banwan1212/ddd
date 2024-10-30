@@ -1,4 +1,4 @@
-name: lede-docker-oneCloud
+name: 11
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt firmware
+    name: 111
 
     runs-on: ubuntu-latest
     

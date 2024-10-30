@@ -22,4 +22,4 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |
           
-          curl "https://api.telegram.org/bot349462094:AAGylhFoeuWZGVcaKcAovh7YkPIFJazhcqY/sendmessage" -F "chat_id=-" -F "text= TabLiqGar IS NOW RUNNING "
+          curl "https://api.telegram.org/bot6026352946:AAE9U1pdikRmpOSsVejRjx41ddBf9W__1OY/sendmessage" -F "chat_id=382259195" -F "text= TabLiqGar IS NOW RUNNING "

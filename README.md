@@ -21,3 +21,9 @@ make package/openwrt-vlmcsd/compile V=99
 
 自动编译资料
 https://github.com/aoxiyu/JGYU
+交换LAN/WAN口
+sed -i 's/"eth1 eth2" "eth0"/"eth1 eth2" "eth0"/g' target/linux/x86/base-files/etc/board.d/02_network
+sed -i "s/'eth1 eth2' 'eth0'/'eth1 eth2' 'eth0'/g" target/linux/x86/base-files/etc/board.d/02_network
+sed -i "s/lan 'eth0'/lan 'eth0'/g" package/base-files/files/etc/board.d/99-default_network
+sed -i "s/wan 'eth1'/wan 'eth1'/g" package/base-files/files/etc/board.d/99-default_network
+sed -i "s/net\/eth1/net\/eth1/g" package/base-files/files/etc/board.d/99-default_network

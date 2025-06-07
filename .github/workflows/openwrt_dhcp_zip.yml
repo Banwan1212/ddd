@@ -394,7 +394,7 @@ jobs:
           path: openwrt/artifact/firmware/
       
       - name: Deliver img_gz
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: OpenWrt_gz
           path: ./openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined.img.gz
